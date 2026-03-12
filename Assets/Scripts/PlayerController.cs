@@ -5,6 +5,11 @@ public class PlayerController : MonoBehaviour
 
     public float speed = 5f;
     public bool isSprinting;
+    public bool invOpen = false;
+    public GameObject inventoryCanvas;
+    public GameObject gameplayCanvas;
+    public GameObject startCanvas;
+    public GameObject pauseCanvas;
     private CharacterController character;
     private Vector2 moveInput;
 
@@ -38,6 +43,29 @@ public class PlayerController : MonoBehaviour
         {
 
             speed = 5f;
+
+        }
+
+    }
+
+    public void inventory(InputAction.CallbackContext context)
+    {
+
+        if (context.ReadValue<float>() != 0 && invOpen == false)
+        {
+
+            gameplayCanvas.SetActive(false);
+            inventoryCanvas.SetActive(true);
+            invOpen = true;
+
+        }
+
+        else if (context.ReadValue<float>() != 0 && invOpen == true)
+        {
+
+            inventoryCanvas.SetActive(false);
+            gameplayCanvas.SetActive(true);
+            invOpen = false;
 
         }
 

@@ -54,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1216
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -132,19 +132,19 @@ TextureImporter:
       name: Tree Tiles_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 626
-        width: 553
-        height: 572
+        x: 0
+        y: 0
+        width: 608
+        height: 1216
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a904b330f7ab8ab00800000000000000
+      spriteID: c3a03c3f73b4a6f4d9ec2294238eeac1
       internalID: 840126385182425242
       vertices: []
       indices: 
@@ -154,19 +154,19 @@ TextureImporter:
       name: Tree Tiles_1
       rect:
         serializedVersion: 2
-        x: 645
-        y: 37
-        width: 515
-        height: 1142
+        x: 608
+        y: 0
+        width: 608
+        height: 1216
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6840ec37e825f02f0800000000000000
+      spriteID: 50af53a8e083be748abf06236d44f287
       internalID: -1004493420098616186
       vertices: []
       indices: 
@@ -176,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8c646ba482dd6fb4f8cb01b710116b2a
     internalID: 0
     vertices: []
     indices: 
@@ -184,7 +184,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":608.0,"y":1216.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      - key: SpriteEditor.SliceOnImport
+        value: False
     nameFileIdTable:
       Tree Tiles_0: 840126385182425242
       Tree Tiles_1: -1004493420098616186

@@ -78,7 +78,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 3800
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -157,11 +157,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3799
-        width: 7600
-        height: 3801
+        y: 3800
+        width: 3800
+        height: 3800
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -178,12 +178,12 @@ TextureImporter:
       name: Ground Tile Map_1
       rect:
         serializedVersion: 2
-        x: 588
-        y: 2906
-        width: 591
-        height: 553
+        x: 3800
+        y: 3800
+        width: 3800
+        height: 3800
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -200,12 +200,12 @@ TextureImporter:
       name: Ground Tile Map_2
       rect:
         serializedVersion: 2
-        x: 1329
-        y: 2146
-        width: 1028
-        height: 1617
+        x: 6
+        y: 0
+        width: 3800
+        height: 3800
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -222,12 +222,12 @@ TextureImporter:
       name: Ground Tile Map_3
       rect:
         serializedVersion: 2
-        x: 2127
-        y: 2317
-        width: 572
-        height: 857
+        x: 3800
+        y: 0
+        width: 3800
+        height: 3800
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -240,143 +240,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Ground Tile Map_4
-      rect:
-        serializedVersion: 2
-        x: 626
-        y: 1443
-        width: 591
-        height: 1256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 639a45939039dad40800000000000000
-      internalID: 5597291579717232950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ground Tile Map_5
-      rect:
-        serializedVersion: 2
-        x: 1120
-        y: 303
-        width: 1237
-        height: 1332
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 29f47d0061c1edad0800000000000000
-      internalID: -2675670247782527086
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ground Tile Map_6
-      rect:
-        serializedVersion: 2
-        x: 2735
-        y: 1595
-        width: 743
-        height: 876
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a35cf674046953bd0800000000000000
-      internalID: -2651047602817088198
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ground Tile Map_7
-      rect:
-        serializedVersion: 2
-        x: 4179
-        y: 854
-        width: 3023
-        height: 1636
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a7007aab18283bfb0800000000000000
-      internalID: -4633216097940209542
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ground Tile Map_8
-      rect:
-        serializedVersion: 2
-        x: 189
-        y: 379
-        width: 762
-        height: 610
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 08e8ef4d30b166b50800000000000000
-      internalID: 6585981208348233344
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ground Tile Map_9
-      rect:
-        serializedVersion: 2
-        x: 3172
-        y: 379
-        width: 325
-        height: 781
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85c703dd8c26aaf30800000000000000
-      internalID: 4587587785274195032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6da2c8f2f816fab4b9317a9262597716
     internalID: 0
     vertices: []
     indices: 
@@ -384,18 +252,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":3800.0,"y":3800.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Ground Tile Map_0: -3417279935636741348
       Ground Tile Map_1: 2848219935379477056
       Ground Tile Map_2: 2422896499597126658
       Ground Tile Map_3: 7659253219425791262
-      Ground Tile Map_4: 5597291579717232950
-      Ground Tile Map_5: -2675670247782527086
-      Ground Tile Map_6: -2651047602817088198
-      Ground Tile Map_7: -4633216097940209542
-      Ground Tile Map_8: 6585981208348233344
-      Ground Tile Map_9: 4587587785274195032
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
     public void inventory(InputAction.CallbackContext context)
     {
 
-        if (context.ReadValue<float>() != 0 && invOpen == false)
+        if (invOpen == false)
         {
 
             gameplayCanvas.SetActive(false);
@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        else if (context.ReadValue<float>() != 0 && invOpen == true)
+        else if (invOpen == true)
         {
 
             inventoryCanvas.SetActive(false);

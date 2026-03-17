@@ -1,31 +1,22 @@
 fileFormatVersion: 2
-guid: 6c82a383c0ba3b746823984ac5f1a6fa
+guid: adce79352a374cc46a16eb6fd0038c38
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -579185190147024109
-    second: Leaf Litter_0
+      213: -7708920532220806285
+    second: Tilemap_0
   - first:
-      213: 3374032846019561877
-    second: Leaf Litter_1
+      213: 4564998844612868550
+    second: Tilemap_1
   - first:
-      213: 165085965808871875
-    second: Leaf Litter_2
+      213: -4247985510503474263
+    second: Tilemap_2
   - first:
-      213: 7875981608962861009
-    second: Leaf Litter_3
+      213: 6623730380747189143
+    second: Tilemap_3
   - first:
-      213: 8445350473771643823
-    second: Leaf Litter_4
-  - first:
-      213: 3102987193627226031
-    second: Leaf Litter_5
-  - first:
-      213: 398105965062617638
-    second: Leaf Litter_6
-  - first:
-      213: 488392148519442054
-    second: Leaf Litter_7
+      213: 57347999071926559
+    second: Tilemap_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -95,7 +86,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -147,177 +138,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Leaf Litter_0
+      name: Tilemap_0
       rect:
         serializedVersion: 2
-        x: 588
-        y: 2906
-        width: 591
-        height: 553
+        x: 0
+        y: 1823
+        width: 609
+        height: 609
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 31b9e12632256f7f0800000000000000
-      internalID: -579185190147024109
+      spriteID: 37b734b9e99640590800000000000000
+      internalID: -7708920532220806285
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leaf Litter_1
-      rect:
-        serializedVersion: 2
-        x: 1329
-        y: 2146
-        width: 1028
-        height: 1617
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5990f7f3ff8f2de20800000000000000
-      internalID: 3374032846019561877
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leaf Litter_2
-      rect:
-        serializedVersion: 2
-        x: 2127
-        y: 2317
-        width: 572
-        height: 857
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3c9a07dafc08a4200800000000000000
-      internalID: 165085965808871875
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leaf Litter_3
+      name: Tilemap_1
       rect:
         serializedVersion: 2
         x: 626
-        y: 1443
-        width: 591
-        height: 1256
+        y: 1842
+        width: 553
+        height: 572
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d7adbb6b8b1d4d60800000000000000
-      internalID: 7875981608962861009
+      spriteID: 6c9f73543422a5f30800000000000000
+      internalID: 4564998844612868550
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leaf Litter_4
+      name: Tilemap_2
       rect:
         serializedVersion: 2
-        x: 1120
-        y: 303
-        width: 1237
-        height: 1332
+        x: 1253
+        y: 1272
+        width: 515
+        height: 1142
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa3f5d0b289e33570800000000000000
-      internalID: 8445350473771643823
+      spriteID: 9ab1f6b5faf1c05c0800000000000000
+      internalID: -4247985510503474263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leaf Litter_5
+      name: Tilemap_3
       rect:
         serializedVersion: 2
-        x: 2735
-        y: 1595
-        width: 743
-        height: 876
+        x: 1823
+        y: 1823
+        width: 609
+        height: 609
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fafacba8966001b20800000000000000
-      internalID: 3102987193627226031
+      spriteID: 79b2660ffa73ceb50800000000000000
+      internalID: 6623730380747189143
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Leaf Litter_6
+      name: Tilemap_4
       rect:
         serializedVersion: 2
-        x: 189
-        y: 379
-        width: 762
-        height: 610
+        x: 640
+        y: 1291
+        width: 496
+        height: 249
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 62a7586144b568500800000000000000
-      internalID: 398105965062617638
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Leaf Litter_7
-      rect:
-        serializedVersion: 2
-        x: 3172
-        y: 379
-        width: 325
-        height: 781
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 686579b421e17c600800000000000000
-      internalID: 488392148519442054
+      spriteID: f19f24983bdbbc000800000000000000
+      internalID: 57347999071926559
       vertices: []
       indices: 
       edges: []
@@ -326,7 +251,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 933c84011f8c9cb40ab0f46d598081c2
     internalID: 0
     vertices: []
     indices: 
@@ -336,14 +261,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Leaf Litter_0: -579185190147024109
-      Leaf Litter_1: 3374032846019561877
-      Leaf Litter_2: 165085965808871875
-      Leaf Litter_3: 7875981608962861009
-      Leaf Litter_4: 8445350473771643823
-      Leaf Litter_5: 3102987193627226031
-      Leaf Litter_6: 398105965062617638
-      Leaf Litter_7: 488392148519442054
+      Tilemap_0: -7708920532220806285
+      Tilemap_1: 4564998844612868550
+      Tilemap_2: -4247985510503474263
+      Tilemap_3: 6623730380747189143
+      Tilemap_4: 57347999071926559
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

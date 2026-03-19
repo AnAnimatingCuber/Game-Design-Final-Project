@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 255
+  spritePixelsToUnits: 608
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -142,11 +142,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1823
-        width: 609
-        height: 609
+        y: 608
+        width: 608
+        height: 608
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -160,37 +160,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilemap_1
-      rect:
-        serializedVersion: 2
-        x: 626
-        y: 1842
-        width: 553
-        height: 572
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6c9f73543422a5f30800000000000000
-      internalID: 4564998844612868550
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Tilemap_2
       rect:
         serializedVersion: 2
-        x: 1253
-        y: 1272
-        width: 515
-        height: 1142
+        x: 1216
+        y: 608
+        width: 608
+        height: 608
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -207,12 +185,12 @@ TextureImporter:
       name: Tilemap_3
       rect:
         serializedVersion: 2
-        x: 1823
-        y: 1823
-        width: 609
-        height: 609
+        x: 1824
+        y: 608
+        width: 608
+        height: 608
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -229,12 +207,12 @@ TextureImporter:
       name: Tilemap_4
       rect:
         serializedVersion: 2
-        x: 645
-        y: 1291
-        width: 496
-        height: 249
+        x: 0
+        y: 0
+        width: 608
+        height: 608
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -247,11 +225,99 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Tilemap_5
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 0
+        width: 608
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e571be37f7342c844b2718f31c1b9ad7
+      internalID: -1799506596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_6
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 0
+        width: 608
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c330722a60b2643afb89a58b22b144
+      internalID: 890486943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_1
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 608
+        width: 608
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88290745fd9b084ba62f86218835a8c
+      internalID: 4564998844612868550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tilemap_7
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 0
+        width: 608
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0984ac95866bf5348b7d5cc7ce9bde7c
+      internalID: 166547632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 26c792ebfa9a8674286d501debcc24da
     internalID: 0
     vertices: []
     indices: 
@@ -259,13 +325,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":608.0,"y":608.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Tilemap_0: -7708920532220806285
       Tilemap_1: 4564998844612868550
       Tilemap_2: -4247985510503474263
       Tilemap_3: 6623730380747189143
       Tilemap_4: 57347999071926559
+      Tilemap_5: -1799506596
+      Tilemap_6: 890486943
+      Tilemap_7: 166547632
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

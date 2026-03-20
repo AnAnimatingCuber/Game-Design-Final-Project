@@ -15,9 +15,12 @@ private void CreateGamePieces(float gapThickness)
     for (int row = 0; row<size; row++){
         for (int col = 0; col<size; col++){
             Transform piece = Instantiate(piecePrefab, gameTransform);
+            pieces.Add(piece);
+
             piece.localPosition = new Vector3(-1 +(2 * width * col)+ width, 1 -(2 * width * row)-width, 0);
             piece.localScale = ((2*width)-gapThickness) * Vector3.one;
             piece.name = $"{(row*size) + col}";
+
             if ((row == size -1) && (col == size-1)){
                 emptyLocation = (size * size)-1;
                 piece.gameObject.SetActive(false);
@@ -30,6 +33,7 @@ private void CreateGamePieces(float gapThickness)
                 uv[1] = new Vector2(( width * (col+1)) - gap, 1 - ((width * (row+1)) - gap));
                 uv[2] = new Vector2(( width * col) + gap, 1 - ((width*row) + gap));
                 uv[3] = new Vector2(( width * (col+1)) - gap, 1 - ((width*row) + gap));
+                mesh.uv = uv;
             }
         }
     }
@@ -39,14 +43,37 @@ private void CreateGamePieces(float gapThickness)
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-         size = 3;
+        pieces = new List<Transform>();
+        size = 3;
         CreateGamePieces(0.01f);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonDown(0)){
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            if(hit){
+                for (int i = 0; i < pieces.Count; i ++){
+                    if(pieces[i] == hit.Transform){
+                        if (CanSwap(i, -size, size)){break; }
+                        if (CanSwap(i, +size, size)){break; }
+                        if (CanSwap(i, -1, 0 )){break; }
+                        if (CanSwap(i, +1, size-1)){break; }
+                    }
+                }
+            }
+        }
+    }
 
+    private bool SwapIfVaild(int i, int offset, int ColCheck){
+        if(((i % size)!= ColCheck) && ((i + offset) == emptyLocation)){
+            (pieces[i], pieces[i + offset]) = (pieces[i + offset], pieces[i]);
+            (pieces[i].localPosition, pieces[i + offset].localPosition) = (pieces[i + offset].localPosition, pieces[i].localPosition);
+            emptyLocation = i;
+            return true;
+        }
+        return false;
     }
 }
 

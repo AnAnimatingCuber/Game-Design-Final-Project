@@ -1,10 +1,12 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class TileGame : MonoBehaviour 
 {
 
 [SerializeField] private Transform gameTransform;
 [SerializeField] private Transform piecePrefab;
+[SerializeField] private List<Transform> pieces;
 
 private int emptyLocation;
 private int size;
@@ -55,7 +57,7 @@ private void CreateGamePieces(float gapThickness)
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if(hit){
                 for (int i = 0; i < pieces.Count; i ++){
-                    if(pieces[i] == hit.Transform){
+                    if(pieces[i] == hit.collider.gameObject.transform){
                         if (CanSwap(i, -size, size)){break; }
                         if (CanSwap(i, +size, size)){break; }
                         if (CanSwap(i, -1, 0 )){break; }
@@ -66,7 +68,7 @@ private void CreateGamePieces(float gapThickness)
         }
     }
 
-    private bool SwapIfVaild(int i, int offset, int ColCheck){
+    private bool CanSwap(int i, int offset, int ColCheck){
         if(((i % size)!= ColCheck) && ((i + offset) == emptyLocation)){
             (pieces[i], pieces[i + offset]) = (pieces[i + offset], pieces[i]);
             (pieces[i].localPosition, pieces[i + offset].localPosition) = (pieces[i + offset].localPosition, pieces[i].localPosition);

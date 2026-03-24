@@ -10,6 +10,7 @@ public class TileGame : MonoBehaviour
 
 private int emptyLocation;
 private int size;
+private bool shuffling = false;
 
 private void CreateGamePieces(float gapThickness)
 {
@@ -27,7 +28,7 @@ private void CreateGamePieces(float gapThickness)
                 emptyLocation = (size * size)-1;
                 piece.gameObject.SetActive(false);
             }
-            else {
+            else{
                 float gap = gapThickness / 2;
                 Mesh mesh = piece.GetComponent<MeshFilter>().mesh;
                 Vector2[] uv = new Vector2[4];
@@ -53,6 +54,10 @@ private void CreateGamePieces(float gapThickness)
     // Update is called once per frame
     void Update()
     {
+        if (!shuffling && CheckCompletion()){
+            shuffling = true;
+            StartCoroutine(WaitShuffle(0.5f));
+        }
         if (Input.GetMouseButtonDown(0)){
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if(hit){
@@ -77,5 +82,40 @@ private void CreateGamePieces(float gapThickness)
         }
         return false;
     }
+
+    private bool CheckCompletion(){
+    for (int i = 0; i < pieces.Count; i++){
+        if (pieces[i].name != $"{i}"){
+            return false;
+        }
+        return true;
+    }
+}
+//IEnumerator Type argument
+private IEnumerator WaitShuffle(float duration){
+    yield return new WaitForSeconds(duration);
+    Shuffle();
+    shuffling = false;
+}
+
+private void shuffle(){
+    int Count = 0;
+    int last = 0;
+    while(Count < (size*size*size)){
+        int rnd = Random.Range(0, size*size);
+        if (rnd == last) {continue; }
+        /*
+        last = emptyLocation;
+        if(CanSwap(rnd, -size, size)){
+            Count++;
+            }else if(rnd, +size, size){
+                Count++;
+            }else if(rnd, -1, 0){
+                Count++;
+            }else if(rnd, 1, 0){
+                Count++;
+            }*/
+    }
+}
 }
 

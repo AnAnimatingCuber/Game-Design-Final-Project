@@ -92,30 +92,37 @@ private void CreateGamePieces(float gapThickness)
     }
 }
 //IEnumerator Type argument
-private IEnumerator WaitShuffle(float duration){
+//private IEnumerator<float> WaitShuffle(float duration){
+    //yield return new WaitForSeconds(duration);//
+IEnumerator Wait(float duration){
     yield return new WaitForSeconds(duration);
     Shuffle();
     shuffling = false;
 }
 
-private void shuffle(){
+
+private void Shuffle(){
     int Count = 0;
     int last = 0;
     while(Count < (size*size*size)){
         int rnd = Random.Range(0, size*size);
         if (rnd == last) {continue; }
-        /*
-        last = emptyLocation;
-        if(CanSwap(rnd, -size, size)){
+    last = emptyLocation;
+        if (CanSwap(rnd, -size, size)){
             Count++;
-            }else if(rnd, +size, size){
-                Count++;
-            }else if(rnd, -1, 0){
-                Count++;
-            }else if(rnd, 1, 0){
-                Count++;
-            }*/
-    }
+        }
+        else if (CanSwap(rnd, +size, size)){
+            Count++;
+        }
+        else if (CanSwap(rnd, -1, 0)){
+            Count++;
+        }
+        else if (CanSwap(rnd, +1, 0)){
+            Count++;
+        }
+
+    
+}
 }
 }
 

@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 5580
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -148,12 +148,12 @@ TextureImporter:
       name: WalkingIdle Back_0
       rect:
         serializedVersion: 2
-        x: 284
-        y: 6434
-        width: 3332
-        height: 5582
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 279
+        y: 6429
+        width: 3345
+        height: 5592
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -170,12 +170,12 @@ TextureImporter:
       name: WalkingIdle Back_1
       rect:
         serializedVersion: 2
-        x: 4184
-        y: 6434
-        width: 3332
-        height: 5582
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4176
+        y: 6429
+        width: 3345
+        height: 5592
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -192,12 +192,12 @@ TextureImporter:
       name: WalkingIdle Back_2
       rect:
         serializedVersion: 2
-        x: 284
-        y: 284
-        width: 3332
-        height: 5582
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 279
+        y: 279
+        width: 3345
+        height: 5592
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -214,7 +214,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 688036b0a5776c4479aa93cc8ceee6e6
     internalID: 0
     vertices: []
     indices: 
@@ -222,7 +222,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":3900.0,"y":6150.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       WalkingIdle Back_0: -5839849289108401386
       WalkingIdle Back_1: 6298653473719421082

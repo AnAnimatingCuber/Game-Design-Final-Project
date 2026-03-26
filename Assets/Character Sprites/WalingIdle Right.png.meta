@@ -54,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 5972
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -145,12 +145,12 @@ TextureImporter:
       name: WalingIdle Right_0
       rect:
         serializedVersion: 2
-        x: 599
-        y: 89
-        width: 2717
-        height: 5972
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 596
+        y: 86
+        width: 2723
+        height: 5978
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -167,12 +167,12 @@ TextureImporter:
       name: WalingIdle Right_1
       rect:
         serializedVersion: 2
-        x: 4499
-        y: 104
-        width: 2717
-        height: 5942
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4496
+        y: 101
+        width: 2723
+        height: 5948
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -189,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b87897f0b1d6a174098d3849c7d1f732
     internalID: 0
     vertices: []
     indices: 
@@ -197,7 +197,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":3900.0,"y":6150.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       WalingIdle Right_0: 275000180099396351
       WalingIdle Right_1: -2625179762436517524

@@ -151,32 +151,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 37b734b9e99640590800000000000000
       internalID: -7708920532220806285
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tilemap_2
-      rect:
-        serializedVersion: 2
-        x: 1216
-        y: 608
-        width: 608
-        height: 608
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9ab1f6b5faf1c05c0800000000000000
-      internalID: -4247985510503474263
       vertices: []
       indices: 
       edges: []
@@ -195,32 +173,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
       spriteID: 79b2660ffa73ceb50800000000000000
       internalID: 6623730380747189143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tilemap_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 608
-        height: 608
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f19f24983bdbbc000800000000000000
-      internalID: 57347999071926559
       vertices: []
       indices: 
       edges: []
@@ -238,7 +194,11 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 231, y: -77}
+        - {x: -263, y: -74}
+        - {x: -266, y: -228}
+        - {x: 228, y: -228}
       tessellationDetail: 0
       bones: []
       spriteID: e571be37f7342c844b2718f31c1b9ad7
@@ -260,7 +220,11 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 115, y: -247}
+        - {x: 113, y: -115}
+        - {x: -113, y: -112}
+        - {x: -116, y: -246}
       tessellationDetail: 0
       bones: []
       spriteID: a8c330722a60b2643afb89a58b22b144
@@ -282,7 +246,15 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -302.8125, y: 304}
+        - {x: -304, y: 304}
+        - {x: -304, y: -304}
+        - {x: -302.8125, y: -304}
+      - - {x: 208, y: -115}
+        - {x: -188, y: -112}
+        - {x: -193, y: -284}
+        - {x: 209, y: -285}
       tessellationDetail: 0
       bones: []
       spriteID: c88290745fd9b084ba62f86218835a8c
@@ -292,11 +264,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tilemap_7
+      name: Tilemap_2
       rect:
         serializedVersion: 2
-        x: 1824
-        y: 0
+        x: 1216
+        y: 608
         width: 608
         height: 608
       alignment: 0
@@ -307,8 +279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0984ac95866bf5348b7d5cc7ce9bde7c
-      internalID: 166547632
+      spriteID: b47fee7ad42e13b45bae01751f4b99da
+      internalID: -4247985510503474263
       vertices: []
       indices: 
       edges: []

@@ -3,20 +3,20 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 { 
 
-    public float speed = 5f;
-    public bool isSprinting;
+    public float speed = 3.5f;
+    public bool isSprinting = false;
     public bool invOpen = false;
     public GameObject inventoryCanvas;
     public GameObject gameplayCanvas;
     public GameObject startCanvas;
     public GameObject pauseCanvas;
-    private CharacterController character;
+    private Rigidbody2D character;
     private Vector2 moveInput;
 
     void Start()
     { 
     
-        character = gameObject.GetComponent<CharacterController>();
+        character = GetComponent<Rigidbody2D>();
 
     }
 
@@ -35,14 +35,14 @@ public class PlayerController : MonoBehaviour
         if (isSprinting == true)
         {
 
-            speed = 10f;
+            speed = 8.5f;
 
         }
 
         else if (isSprinting == false)
         {
 
-            speed = 5f;
+            speed = 3.5f;
 
         }
 
@@ -71,11 +71,11 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     { 
 
         Vector2 moveVector = new Vector2(moveInput.x, moveInput.y);
-        character.Move(moveVector * speed *Time.deltaTime);
+        character.MovePosition(character.position + moveVector * speed * Time.fixedDeltaTime);
 
     }
 

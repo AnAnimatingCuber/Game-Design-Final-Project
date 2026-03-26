@@ -49,6 +49,7 @@ private void CreateGamePieces(float gapThickness)
         pieces = new List<Transform>();
         size = 3;
         CreateGamePieces(0.01f);
+
     }
 
     // Update is called once per frame
@@ -56,7 +57,7 @@ private void CreateGamePieces(float gapThickness)
     {
         if (!shuffling && CheckCompletion()){
             shuffling = true;
-            StartCoroutine(WaitShuffle(0.5f));
+            StartCoroutine(Wait(0.5f));
         }
         if (Input.GetMouseButtonDown(0)){
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
@@ -91,10 +92,8 @@ private void CreateGamePieces(float gapThickness)
         return true;
     }
 }
-//IEnumerator Type argument
-//private IEnumerator<float> WaitShuffle(float duration){
-    //yield return new WaitForSeconds(duration);//
-IEnumerator Wait(float duration){
+
+private IEnumerator <float> Wait(float duration){
     yield return new WaitForSeconds(duration);
     Shuffle();
     shuffling = false;

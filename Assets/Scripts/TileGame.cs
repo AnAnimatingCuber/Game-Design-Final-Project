@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class TileGame : MonoBehaviour 
 {
@@ -11,6 +12,8 @@ public class TileGame : MonoBehaviour
 private int emptyLocation;
 private int size;
 private bool shuffling = false;
+private bool finished = false;
+public GameObject winScreen;
 
 private void CreateGamePieces(float gapThickness)
 {
@@ -48,7 +51,7 @@ private void CreateGamePieces(float gapThickness)
     {
         pieces = new List<Transform>();
         size = 3;
-        CreateGamePieces(0.01f);
+        CreateGamePieces(0.05f);
 
     }
 
@@ -57,7 +60,7 @@ private void CreateGamePieces(float gapThickness)
     {
         if (!shuffling && CheckCompletion()){
             shuffling = true;
-            StartCoroutine(Wait(0.5f));
+            StartCoroutine(Wait(0.05f));
         }
         if (Input.GetMouseButtonDown(0)){
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
@@ -72,6 +75,9 @@ private void CreateGamePieces(float gapThickness)
                 }
             }
         }
+        if(finished = true){
+            winScreen.SetActive(true);
+        }
     }
 
     private bool CanSwap(int i, int offset, int ColCheck){
@@ -84,27 +90,28 @@ private void CreateGamePieces(float gapThickness)
         return false;
     }
 
-    private bool CheckCompletion(){
-    for (int i = 0; i < pieces.Count; i++){
-        if (pieces[i].name != $"{i}"){
-            return false;
-        }
-        return true;
-    }
-}
-
-private IEnumerator <float> Wait(float duration){
+private IEnumerator Wait(float duration){
     yield return new WaitForSeconds(duration);
     Shuffle();
     shuffling = false;
 }
+
+private bool CheckCompletion(){
+    for (int i = 0; i < pieces.Count; i++){
+        if (pieces[i].name != $"{i}"){
+            return false;
+        }
+    }
+        return true;
+    }
+
 
 
 private void Shuffle(){
     int Count = 0;
     int last = 0;
     while(Count < (size*size*size)){
-        int rnd = Random.Range(0, size*size);
+        int rnd = Random.Range(0,size*size);
         if (rnd == last) {continue; }
     last = emptyLocation;
         if (CanSwap(rnd, -size, size)){

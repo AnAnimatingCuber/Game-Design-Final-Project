@@ -11,12 +11,14 @@ public class PlayerController : MonoBehaviour
     public GameObject startCanvas;
     public GameObject pauseCanvas;
     private Rigidbody2D character;
+    private Animator animator;
     private Vector2 moveInput;
 
     void Start()
     { 
     
         character = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
     }
 
@@ -24,7 +26,20 @@ public class PlayerController : MonoBehaviour
     { 
     
         moveInput = context.ReadValue<Vector2>();
+        if(moveInput.x != 0 || moveInput.y != 0)
+        {
 
+            animator.SetFloat("X", moveInput.x);
+            animator.SetFloat("Y", moveInput.y);
+            animator.SetBool("Walking", true);
+
+        }
+        else
+        {
+
+            animator.SetBool("Walking", false);
+
+        }
 
     }
 

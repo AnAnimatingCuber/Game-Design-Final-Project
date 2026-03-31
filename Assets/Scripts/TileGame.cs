@@ -12,7 +12,6 @@ public class TileGame : MonoBehaviour
 private int emptyLocation;
 private int size;
 private bool shuffling = false;
-private bool finished = false;
 public GameObject winScreen;
 
 private void CreateGamePieces(float gapThickness)
@@ -51,7 +50,7 @@ private void CreateGamePieces(float gapThickness)
     {
         pieces = new List<Transform>();
         size = 3;
-        CreateGamePieces(0.05f);
+        CreateGamePieces(0.01f);
 
     }
 
@@ -74,9 +73,6 @@ private void CreateGamePieces(float gapThickness)
                     }
                 }
             }
-        }
-        if(finished = true){
-            winScreen.SetActive(true);
         }
     }
 
@@ -106,7 +102,6 @@ private bool CheckCompletion(){
     }
 
 
-
 private void Shuffle(){
     int Count = 0;
     int last = 0;
@@ -123,7 +118,7 @@ private void Shuffle(){
         else if (CanSwap(rnd, -1, 0)){
             Count++;
         }
-        else if (CanSwap(rnd, +1, 0)){
+        else if (CanSwap(rnd, +1, -1)){
             Count++;
         }
 

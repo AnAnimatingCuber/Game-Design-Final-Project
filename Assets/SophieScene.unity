@@ -627,7 +627,7 @@ MonoBehaviour:
   gameTransform: {fileID: 437195323}
   piecePrefab: {fileID: 8860097414093501583, guid: 09331c2296887dd4695fd59457268ac4, type: 3}
   pieces: []
-  winScreen: {fileID: 0}
+  winScreen: {fileID: 466019827}
 --- !u!4 &565772322
 Transform:
   m_ObjectHideFlags: 0

@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
         if (isSprinting == true)
         {
 
-            speed = 8.5f;
+            speed = 6f;
 
         }
 
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void inventory(InputAction.CallbackContext context)
+    public void openInventory(InputAction.CallbackContext context)
     {
 
         if (invOpen == false)

@@ -90,6 +90,7 @@ private IEnumerator Wait(float duration){
     yield return new WaitForSeconds(duration);
     Shuffle();
     shuffling = false;
+    winScreen.SetActive(true);
 }
 
 private bool CheckCompletion(){

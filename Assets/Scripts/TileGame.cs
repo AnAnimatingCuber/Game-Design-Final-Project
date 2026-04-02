@@ -10,7 +10,7 @@ public class TileGame : MonoBehaviour
 [SerializeField] private List<Transform> pieces;
 
 private int emptyLocation;
-private int size;
+public int size;
 private bool shuffling = false;
 public GameObject winScreen;
 
@@ -74,6 +74,7 @@ private void CreateGamePieces(float gapThickness)
                 }
             }
         }
+        Finish();
     }
 
     private bool CanSwap(int i, int offset, int ColCheck){
@@ -90,7 +91,6 @@ private IEnumerator Wait(float duration){
     yield return new WaitForSeconds(duration);
     Shuffle();
     shuffling = false;
-    winScreen.SetActive(true);
 }
 
 private bool CheckCompletion(){
@@ -101,6 +101,14 @@ private bool CheckCompletion(){
     }
         return true;
     }
+
+private void Finish(){
+    for(int i = 0; i < pieces.Count; i++){
+        if(pieces[i].name != $"{i}"){
+            winScreen.SetActive(true);
+        }
+    }
+}
 
 
 private void Shuffle(){

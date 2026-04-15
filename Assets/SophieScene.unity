@@ -328,12 +328,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287634671}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -400, y: -160.5985, z: 0}
+  m_LocalScale: {x: 0.4987531, y: 0.4987531, z: 0.4987531}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 332541039}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &332541035
 GameObject:
@@ -428,7 +428,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 287634674}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -726,7 +727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   gameTransform: {fileID: 437195323}
-  piecePrefab: {fileID: 8860097414093501583, guid: 09331c2296887dd4695fd59457268ac4, type: 3}
+  piecePrefab: {fileID: 5254659247706385659, guid: cf4a45028fcd2a145998937a5694c950, type: 3}
   pieces: []
   size: 3
   winScreen: {fileID: 466019827}
@@ -936,5 +937,4 @@ SceneRoots:
   - {fileID: 437195323}
   - {fileID: 565772322}
   - {fileID: 466019831}
-  - {fileID: 287634674}
   - {fileID: 332541039}

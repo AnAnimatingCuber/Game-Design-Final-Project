@@ -13,7 +13,6 @@ private int emptyLocation;
 public int size;
 private bool shuffling = false;
 public GameObject winScreen;
-private bool win = false;
 
 private void CreateGamePieces(float gapThickness)
 {
@@ -75,9 +74,7 @@ private void CreateGamePieces(float gapThickness)
                 }
             }
         }
-        if (win = true){
-            winScreen.SetActive(true);
-        }
+        
     }
 
     private bool CanSwap(int i, int offset, int ColCheck){
@@ -104,13 +101,6 @@ private bool CheckCompletion(){
     }
         return true;
     }
-private bool win(){
-    for(int i= 0; i < pieces.Count; i++){
-        if(pieces[i].name != $"{i}"){
-
-        }
-    }
-}
 
 
 private void Shuffle(){

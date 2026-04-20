@@ -21971,9 +21971,30 @@ CompositeCollider2D:
   m_EdgeRadius: 0
   m_ColliderPaths:
   - m_Collider: {fileID: 1792964551}
-    m_ColliderPaths: []
+    m_ColliderPaths:
+    - - X: 7516447
+        Y: -48684212
+      - X: 7516447
+        Y: -41069080
+      - X: 7483552
+        Y: -41036188
+      - X: 2812500
+        Y: -41036188
+      - X: 2286184
+        Y: -41217104
+      - X: 2286184
+        Y: -48750000
+      - X: 6282894
+        Y: -48750000
   m_CompositePaths:
-    m_Paths: []
+    m_Paths:
+    - - {x: 0.62829, y: -4.875}
+      - {x: 0.75164473, y: -4.8683934}
+      - {x: 0.7516371, y: -4.1069}
+      - {x: 0.7483444, y: -4.1036186}
+      - {x: 0.2812463, y: -4.10362}
+      - {x: 0.2286184, y: -4.12173}
+      - {x: 0.22864771, y: -4.875}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -22107,7 +22128,17 @@ Tilemap:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792964547}
   m_Enabled: 1
-  m_Tiles: {}
+  m_Tiles:
+  - first: {x: 0, y: -5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 0
@@ -22120,8 +22151,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: e7f10bfbddd4b594ea40ff091de7879d, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -22133,30 +22164,30 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 63910061, guid: 6c9300194ddc4054ea7d75d04af9c325, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 0
+  - m_RefCount: 1
     m_Data:
-      e00: 10.921082
+      e00: 1
       e01: 0
-      e02: 10.921173
-      e03: 5.0000076
-      e10: 2.54e-43
-      e11: 0
-      e12: 2.54e-43
-      e13: 7.06e-43
-      e20: -2.2378988e-34
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
       e21: 0
-      e22: -6.426763e+26
-      e23: -2.411061e-18
-      e30: 4.5907e-41
+      e22: 1
+      e23: 0
+      e30: 0
       e31: 0
-      e32: 7.1e-43
-      e33: 7.06e-43
+      e32: 0
+      e33: 1
   m_TileColorArray:
-  - m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+  - m_RefCount: 1
+    m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}

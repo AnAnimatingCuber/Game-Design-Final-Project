@@ -11,13 +11,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1039861512546200936}
-    m_Position: {x: 200, y: 0, z: 0}
+    m_Position: {x: 270, y: -50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8971600382601723560}
-    m_Position: {x: 235, y: 65, z: 0}
+    m_Position: {x: 340, y: 70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3714400644985001970}
-    m_Position: {x: 270, y: 130, z: 0}
+    m_Position: {x: 400, y: 180, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -138,7 +138,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: endTransition
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3714400644985001970}
   m_Solo: 0
@@ -149,7 +152,7 @@ AnimatorStateTransition:
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 0
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1

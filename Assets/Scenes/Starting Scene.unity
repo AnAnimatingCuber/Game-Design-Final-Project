@@ -649,7 +649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Transitions
   transitionAnim: {fileID: 1810379400}
-  sceneName: SophieScene
+  sceneName: Alik's Scene
 --- !u!4 &680390413
 Transform:
   m_ObjectHideFlags: 0

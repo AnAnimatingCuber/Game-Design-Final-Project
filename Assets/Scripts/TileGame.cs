@@ -13,6 +13,7 @@ private int emptyLocation;
 public int size;
 private bool shuffling = false;
 public GameObject winScreen;
+private int counter;
 
 private void CreateGamePieces(float gapThickness)
 {
@@ -51,6 +52,7 @@ private void CreateGamePieces(float gapThickness)
         pieces = new List<Transform>();
         size = 3;
         CreateGamePieces(0.01f);
+        counter = 0;
 
     }
 
@@ -74,6 +76,9 @@ private void CreateGamePieces(float gapThickness)
                 }
             }
         }
+        if(counter == 2){
+            winScreen.SetActive(true);
+        }
         
     }
 
@@ -91,6 +96,7 @@ private IEnumerator Wait(float duration){
     yield return new WaitForSeconds(duration);
     Shuffle();
     shuffling = false;
+    counter = counter + 1;
 }
 
 private bool CheckCompletion(){

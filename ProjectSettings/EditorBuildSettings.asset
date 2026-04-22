@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LanternTile.unity
     guid: faf733dccf8992c44bf297e770d42680
+  - enabled: 1
+    path: Assets/Scenes/KeyTile.unity
+    guid: 199759b03666a264fa259d985eb1b289
+  - enabled: 1
+    path: Assets/Scenes/Starting Scene.unity
+    guid: 4cf8cb30245251045ac046a6ffde771c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

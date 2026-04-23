@@ -702,7 +702,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 474203781}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 680390412}
+        m_TargetAssemblyTypeName: Transitions, Assembly-CSharp
+        m_MethodName: quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &474203781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1242,6 +1254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Transitions
   transitionAnim: {fileID: 1810379400}
   sceneName: Alik's Scene
+  pauseScreen: {fileID: 1926105130}
 --- !u!4 &680390413
 Transform:
   m_ObjectHideFlags: 0
@@ -2031,7 +2044,7 @@ GameObject:
   - component: {fileID: 1926105132}
   - component: {fileID: 1926105131}
   m_Layer: 5
-  m_Name: Pause Screen
+  m_Name: pauseScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2341,7 +2354,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1995524345}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 680390412}
+        m_TargetAssemblyTypeName: Transitions, Assembly-CSharp
+        m_MethodName: quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1995524345
 MonoBehaviour:
   m_ObjectHideFlags: 0

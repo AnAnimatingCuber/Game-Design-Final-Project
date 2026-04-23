@@ -30,4 +30,8 @@ public class Transitions : MonoBehaviour
           yield return new WaitForSeconds(2f);
           SceneManager.LoadScene(sceneName);
     }
+
+    public void quit(){
+        Application.Quit();
+    }
 }

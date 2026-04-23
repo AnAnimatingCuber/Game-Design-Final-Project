@@ -14,6 +14,8 @@ public int size;
 private bool shuffling = false;
 public GameObject winScreen;
 private int counter;
+public GameObject whilePlaying;
+public GameObject pauseScreen;
 
 private void CreateGamePieces(float gapThickness)
 {
@@ -78,6 +80,7 @@ private void CreateGamePieces(float gapThickness)
         }
         if(counter == 2){
             winScreen.SetActive(true);
+            whilePlaying.SetActive(false);
         }
         
     }
@@ -131,6 +134,16 @@ private void Shuffle(){
 
     
 }
+}
+
+public void pause(){
+    whilePlaying.SetActive(false);
+    pauseScreen.SetActive(true);
+}
+
+public void unpause(){
+    pauseScreen.SetActive(false);
+    whilePlaying.SetActive(true);
 }
 }
 

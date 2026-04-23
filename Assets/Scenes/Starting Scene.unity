@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &37560018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1254,7 +1254,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Transitions
   transitionAnim: {fileID: 1810379400}
   sceneName: Alik's Scene
-  pauseScreen: {fileID: 1926105130}
 --- !u!4 &680390413
 Transform:
   m_ObjectHideFlags: 0
@@ -2049,7 +2048,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1926105131
 MonoBehaviour:
   m_ObjectHideFlags: 0

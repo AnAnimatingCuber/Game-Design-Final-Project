@@ -27,7 +27,7 @@ public class Transitions : MonoBehaviour
 
     IEnumerator LoadScene(){
           transitionAnim.SetTrigger("endTransition");
-          yield return new WaitForSeconds(2f);
+          yield return new WaitForSeconds(.5f);
           SceneManager.LoadScene(sceneName);
     }
 

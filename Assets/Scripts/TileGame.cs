@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using TMPro;
 
 public class TileGame : MonoBehaviour 
 {
@@ -8,6 +9,7 @@ public class TileGame : MonoBehaviour
 [SerializeField] private Transform gameTransform;
 [SerializeField] private Transform piecePrefab;
 [SerializeField] private List<Transform> pieces;
+[SerializeField] TextMeshProUGUI timerText;
 
 private int emptyLocation;
 public int size;
@@ -16,6 +18,7 @@ public GameObject winScreen;
 private int counter;
 public GameObject whilePlaying;
 public GameObject pauseScreen;
+float elapsedTime;
 
 private void CreateGamePieces(float gapThickness)
 {
@@ -82,7 +85,11 @@ private void CreateGamePieces(float gapThickness)
             winScreen.SetActive(true);
             whilePlaying.SetActive(false);
         }
-        
+
+        elapsedTime += Time.deltaTime;
+        int minutes = Mathf.FloorToInt(elapsedTime / 60);
+        int seconds = Mathf.FloorToInt(elapsedTime % 60);
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     private bool CanSwap(int i, int offset, int ColCheck){

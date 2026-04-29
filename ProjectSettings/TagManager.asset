@@ -6,6 +6,12 @@ TagManager:
   tags:
   - keyt
   - keyb
+  - lantern
+  - lanternd
+  - lanternc
+  - lanternb
+  - lanterna
+  - pagea
   layers:
   - Default
   - TransparentFX

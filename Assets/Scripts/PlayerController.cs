@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
+using System.Collections.Generic;
+
 public class PlayerController : MonoBehaviour
 { 
 
@@ -14,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public PickupScript Destroy;
     public string objtag;
     public int keys = 0;
+    public int lanternPeices = 0;
+    public List<string> inventory = new List<string>();
     private Rigidbody2D character;
     private Animator animator;
     private Vector2 moveInput;
@@ -75,7 +80,7 @@ public class PlayerController : MonoBehaviour
         {
 
             Debug.Log("keyt");
-            objtag = "t";
+            objtag = "kt";
             GameObject key_piece_top_0 = GameObject.Find("key_piece_top_0");
             Destroy = key_piece_top_0.GetComponent<PickupScript>();
 
@@ -85,9 +90,49 @@ public class PlayerController : MonoBehaviour
         {
 
             Debug.Log("keyb");
-            objtag = "b";
+            objtag = "kb";
             GameObject key_piece_bottom_0 = GameObject.Find("key_piece_bottom_0");
             Destroy = key_piece_bottom_0.GetComponent<PickupScript>();
+
+        }
+
+        else if (other.gameObject.tag == "lanterna")
+        {
+
+            Debug.Log("lanterna");
+            objtag = "la";
+            GameObject lantern_piece_one_0 = GameObject.Find("lantern_piece_one_0");
+            Destroy = lantern_piece_one_0.GetComponent<PickupScript>();
+
+        }
+
+        else if (other.gameObject.tag == "lanternb")
+        {
+
+            Debug.Log("lanternb");
+            objtag = "lb";
+            GameObject lantern_piece_two_0 = GameObject.Find("lantern_piece_two_0");
+            Destroy = lantern_piece_two_0.GetComponent<PickupScript>();
+
+        }
+
+        else if (other.gameObject.tag == "lanternc")
+        {
+
+            Debug.Log("lanternc");
+            objtag = "lc";
+            GameObject lantern_piece_three_0 = GameObject.Find("lantern_piece_three_0");
+            Destroy = lantern_piece_three_0.GetComponent<PickupScript>();
+
+        }
+
+        else if (other.gameObject.tag == "lanternd")
+        {
+
+            Debug.Log("lanternd");
+            objtag = "ld";
+            GameObject lantern_piece_four_0 = GameObject.Find("lantern_piece_four_0");
+            Destroy = lantern_piece_four_0.GetComponent<PickupScript>();
 
         }
 
@@ -107,8 +152,49 @@ public class PlayerController : MonoBehaviour
         if (pickUpAllowed == true)
         {
 
+            if (objtag == "kt")
+            {
+
+                keys = keys + 1;
+
+            }
+
+            else if (objtag == "kb")
+            {
+
+                keys = keys + 1;
+
+            }
+
+            else if (objtag == "la")
+            {
+
+                lanternPeices = lanternPeices + 1;
+
+            }
+
+            else if (objtag == "lb")
+            {
+
+                lanternPeices = lanternPeices + 1;
+
+            }
+
+            else if (objtag == "lc")
+            {
+
+                lanternPeices = lanternPeices + 1;
+
+            }
+
+            else if (objtag == "ld")
+            {
+
+                lanternPeices = lanternPeices + 1;
+
+            }
+
             Destroy.Destroy();
-            keys = keys + 1;
 
         }
 

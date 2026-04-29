@@ -7,6 +7,8 @@ public class Transitions : MonoBehaviour
 {
     public Animator transitionAnim;
     public string sceneName;
+    public GameObject startScreen;
+    public GameObject instructionsScreen;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,5 +35,15 @@ public class Transitions : MonoBehaviour
 
     public void quit(){
         Application.Quit();
+    }
+
+    public void instructions(){
+        startScreen.SetActive(false);
+        instructionsScreen.SetActive(true);
+    }
+
+    public void back(){
+        instructionsScreen.SetActive(false);
+        startScreen.SetActive(true);
     }
 }

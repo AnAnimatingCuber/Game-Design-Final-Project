@@ -19,6 +19,7 @@ private int counter;
 public GameObject whilePlaying;
 public GameObject pauseScreen;
 float elapsedTime;
+public GameObject skipButton;
 
 private void CreateGamePieces(float gapThickness)
 {
@@ -64,9 +65,10 @@ private void CreateGamePieces(float gapThickness)
     // Update is called once per frame
     void Update()
     {
+        skip();
         if (!shuffling && CheckCompletion()){
             shuffling = true;
-            StartCoroutine(Wait(0.05f));
+            StartCoroutine(Wait(2f));
         }
         if (Input.GetMouseButtonDown(0)){
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
@@ -92,7 +94,8 @@ private void CreateGamePieces(float gapThickness)
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    private bool CanSwap(int i, int offset, int ColCheck){
+    private bool CanSwap(int i, int offset, int ColCheck)
+    {
         if(((i % size)!= ColCheck) && ((i + offset) == emptyLocation)){
             (pieces[i], pieces[i + offset]) = (pieces[i + offset], pieces[i]);
             (pieces[i].localPosition, pieces[i + offset].localPosition) = (pieces[i + offset].localPosition, pieces[i].localPosition);
@@ -146,11 +149,19 @@ private void Shuffle(){
 public void pause(){
     whilePlaying.SetActive(false);
     pauseScreen.SetActive(true);
+    Time.timeScale = 0f;
 }
 
 public void unpause(){
     pauseScreen.SetActive(false);
     whilePlaying.SetActive(true);
+    Time.timeScale = 1f;
+}
+
+public void skip(){
+    if(Time.deltaTime == 20f){
+        skipButton.SetActive(true);
+    }
 }
 }
 

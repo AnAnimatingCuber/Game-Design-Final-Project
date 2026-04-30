@@ -59,13 +59,13 @@ private void CreateGamePieces(float gapThickness)
         size = 3;
         CreateGamePieces(0.01f);
         counter = 0;
+        StartCoroutine(Skip());
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        skip();
         if (!shuffling && CheckCompletion()){
             shuffling = true;
             StartCoroutine(Wait(2f));
@@ -158,10 +158,9 @@ public void unpause(){
     Time.timeScale = 1f;
 }
 
-public void skip(){
-    if(Time.deltaTime == 20f){
-        skipButton.SetActive(true);
-    }
+private IEnumerator Skip(){
+    yield return new WaitForSeconds(10f);
+    skipButton.SetActive(true);
 }
 }
 

@@ -12,12 +12,12 @@ public class PlayerController : MonoBehaviour
     public bool pickUpAllowed = false;
     public GameObject inventoryCanvas;
     public GameObject gameplayCanvas;
-    public GameObject startCanvas;
     public GameObject pauseCanvas;
-    public PickupScript Destroy;
+    public PickupScript destroy;
     public string objtag;
     public int keys = 0;
     public int lanternPeices = 0;
+    public string selectedObj;
     public List<string> inventory = new List<string>();
     private Rigidbody2D character;
     private Animator animator;
@@ -33,20 +33,26 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     { 
-    
-        moveInput = context.ReadValue<Vector2>();
-        if(moveInput.x != 0 || moveInput.y != 0)
+
+        if (invOpen == false)
         {
 
-            animator.SetFloat("X", moveInput.x);
-            animator.SetFloat("Y", moveInput.y);
-            animator.SetBool("Walking", true);
+            moveInput = context.ReadValue<Vector2>();
+            if(moveInput.x != 0 || moveInput.y != 0)
+            {
 
-        }
-        else
-        {
+                animator.SetFloat("X", moveInput.x);
+                animator.SetFloat("Y", moveInput.y);
+                animator.SetBool("Walking", true);
 
-            animator.SetBool("Walking", false);
+            }
+
+            else
+            {
+
+                animator.SetBool("Walking", false);
+
+            }
 
         }
 
@@ -82,7 +88,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("keyt");
             objtag = "kt";
             GameObject key_piece_top_0 = GameObject.Find("key_piece_top_0");
-            Destroy = key_piece_top_0.GetComponent<PickupScript>();
+            destroy = key_piece_top_0.GetComponent<PickupScript>();
 
         }
 
@@ -92,7 +98,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("keyb");
             objtag = "kb";
             GameObject key_piece_bottom_0 = GameObject.Find("key_piece_bottom_0");
-            Destroy = key_piece_bottom_0.GetComponent<PickupScript>();
+            destroy = key_piece_bottom_0.GetComponent<PickupScript>();
 
         }
 
@@ -102,7 +108,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("lanterna");
             objtag = "la";
             GameObject lantern_piece_one_0 = GameObject.Find("lantern_piece_one_0");
-            Destroy = lantern_piece_one_0.GetComponent<PickupScript>();
+            destroy = lantern_piece_one_0.GetComponent<PickupScript>();
 
         }
 
@@ -112,7 +118,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("lanternb");
             objtag = "lb";
             GameObject lantern_piece_two_0 = GameObject.Find("lantern_piece_two_0");
-            Destroy = lantern_piece_two_0.GetComponent<PickupScript>();
+            destroy = lantern_piece_two_0.GetComponent<PickupScript>();
 
         }
 
@@ -122,7 +128,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("lanternc");
             objtag = "lc";
             GameObject lantern_piece_three_0 = GameObject.Find("lantern_piece_three_0");
-            Destroy = lantern_piece_three_0.GetComponent<PickupScript>();
+            destroy = lantern_piece_three_0.GetComponent<PickupScript>();
 
         }
 
@@ -132,7 +138,27 @@ public class PlayerController : MonoBehaviour
             Debug.Log("lanternd");
             objtag = "ld";
             GameObject lantern_piece_four_0 = GameObject.Find("lantern_piece_four_0");
-            Destroy = lantern_piece_four_0.GetComponent<PickupScript>();
+            destroy = lantern_piece_four_0.GetComponent<PickupScript>();
+
+        }
+
+        else if (other.gameObject.tag == "lantern")
+        {
+
+            Debug.Log("lantern");
+            objtag = "lantern";
+            GameObject normal_lantern_0 = GameObject.Find("normal_lantern_0");
+            destroy = normal_lantern_0.GetComponent<PickupScript>();
+
+        }
+
+        else if (other.gameObject.tag == "pagea")
+        {
+
+            Debug.Log("pagea");
+            objtag = "pa";
+            GameObject combine_spell_0 = GameObject.Find("combine_spell_0");
+            destroy = combine_spell_0.GetComponent<PickupScript>();
 
         }
 
@@ -155,6 +181,7 @@ public class PlayerController : MonoBehaviour
             if (objtag == "kt")
             {
 
+                inventory.Add("Keyt");
                 keys = keys + 1;
 
             }
@@ -162,6 +189,7 @@ public class PlayerController : MonoBehaviour
             else if (objtag == "kb")
             {
 
+                inventory.Add("Keyb");
                 keys = keys + 1;
 
             }
@@ -169,6 +197,7 @@ public class PlayerController : MonoBehaviour
             else if (objtag == "la")
             {
 
+                inventory.Add("Lantern Peice a");
                 lanternPeices = lanternPeices + 1;
 
             }
@@ -176,6 +205,7 @@ public class PlayerController : MonoBehaviour
             else if (objtag == "lb")
             {
 
+                inventory.Add("Lantern Peice b");
                 lanternPeices = lanternPeices + 1;
 
             }
@@ -183,6 +213,7 @@ public class PlayerController : MonoBehaviour
             else if (objtag == "lc")
             {
 
+                inventory.Add("Lantern Peice c");
                 lanternPeices = lanternPeices + 1;
 
             }
@@ -190,11 +221,26 @@ public class PlayerController : MonoBehaviour
             else if (objtag == "ld")
             {
 
+                inventory.Add("Lantern Peice d");
                 lanternPeices = lanternPeices + 1;
 
             }
 
-            Destroy.Destroy();
+            else if (objtag == "lantern")
+            {
+
+                inventory.Add("Normal Lantern");
+
+            }
+
+            else if (objtag == "pa")
+            {
+
+                inventory.Add("Lore Page Spell");
+
+            }
+
+            destroy.Destroy();
 
         }
 

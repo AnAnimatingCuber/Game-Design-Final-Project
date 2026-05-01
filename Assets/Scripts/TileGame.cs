@@ -20,6 +20,7 @@ public GameObject whilePlaying;
 public GameObject pauseScreen;
 float elapsedTime;
 public GameObject skipButton;
+public GameObject verifyScreen;
 
 private void CreateGamePieces(float gapThickness)
 {
@@ -154,12 +155,18 @@ public void pause(){
 
 public void unpause(){
     pauseScreen.SetActive(false);
+    verifyScreen.SetActive(false);
     whilePlaying.SetActive(true);
     Time.timeScale = 1f;
 }
 
+public void verify(){
+    whilePlaying.SetActive(false);
+    verifyScreen.SetActive(true);
+}
+
 private IEnumerator Skip(){
-    yield return new WaitForSeconds(10f);
+    yield return new WaitForSeconds(120f);
     skipButton.SetActive(true);
 }
 }

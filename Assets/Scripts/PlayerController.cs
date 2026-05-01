@@ -14,11 +14,20 @@ public class PlayerController : MonoBehaviour
     public GameObject gameplayCanvas;
     public GameObject pauseCanvas;
     public PickupScript destroy;
+    public GameObject keyt;
+    public GameObject keyb;
+    public GameObject lanterna;
+    public GameObject lanternb;
+    public GameObject lanternc;
+    public GameObject lanternd;
+    public GameObject lanternn;
+    public GameObject pagea;
     public string objtag;
     public int keys = 0;
     public int lanternPeices = 0;
     public string selectedObj;
     public List<string> inventory = new List<string>();
+    
     private Rigidbody2D character;
     private Animator animator;
     private Vector2 moveInput;
@@ -85,7 +94,6 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "keyt")
         {
 
-            Debug.Log("keyt");
             objtag = "kt";
             GameObject key_piece_top_0 = GameObject.Find("key_piece_top_0");
             destroy = key_piece_top_0.GetComponent<PickupScript>();
@@ -95,7 +103,6 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.tag == "keyb")
         {
 
-            Debug.Log("keyb");
             objtag = "kb";
             GameObject key_piece_bottom_0 = GameObject.Find("key_piece_bottom_0");
             destroy = key_piece_bottom_0.GetComponent<PickupScript>();
@@ -105,7 +112,6 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.tag == "lanterna")
         {
 
-            Debug.Log("lanterna");
             objtag = "la";
             GameObject lantern_piece_one_0 = GameObject.Find("lantern_piece_one_0");
             destroy = lantern_piece_one_0.GetComponent<PickupScript>();
@@ -115,7 +121,6 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.tag == "lanternb")
         {
 
-            Debug.Log("lanternb");
             objtag = "lb";
             GameObject lantern_piece_two_0 = GameObject.Find("lantern_piece_two_0");
             destroy = lantern_piece_two_0.GetComponent<PickupScript>();
@@ -125,7 +130,6 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.tag == "lanternc")
         {
 
-            Debug.Log("lanternc");
             objtag = "lc";
             GameObject lantern_piece_three_0 = GameObject.Find("lantern_piece_three_0");
             destroy = lantern_piece_three_0.GetComponent<PickupScript>();
@@ -135,7 +139,6 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.tag == "lanternd")
         {
 
-            Debug.Log("lanternd");
             objtag = "ld";
             GameObject lantern_piece_four_0 = GameObject.Find("lantern_piece_four_0");
             destroy = lantern_piece_four_0.GetComponent<PickupScript>();
@@ -145,7 +148,6 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.tag == "lantern")
         {
 
-            Debug.Log("lantern");
             objtag = "lantern";
             GameObject normal_lantern_0 = GameObject.Find("normal_lantern_0");
             destroy = normal_lantern_0.GetComponent<PickupScript>();
@@ -155,7 +157,6 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.tag == "pagea")
         {
 
-            Debug.Log("pagea");
             objtag = "pa";
             GameObject combine_spell_0 = GameObject.Find("combine_spell_0");
             destroy = combine_spell_0.GetComponent<PickupScript>();
@@ -183,6 +184,15 @@ public class PlayerController : MonoBehaviour
 
                 inventory.Add("Keyt");
                 keys = keys + 1;
+                selectedObj = ("Keyt");
+                keyt.SetActive(true);
+                keyb.SetActive(false);
+                lanterna.SetActive(false);
+                lanternb.SetActive(false);
+                lanternc.SetActive(false);
+                lanternd.SetActive(false);
+                lanternn.SetActive(false);
+                pagea.SetActive(false);
 
             }
 
@@ -191,6 +201,15 @@ public class PlayerController : MonoBehaviour
 
                 inventory.Add("Keyb");
                 keys = keys + 1;
+                selectedObj = ("Keyb");
+                keyt.SetActive(false);
+                keyb.SetActive(true);
+                lanterna.SetActive(false);
+                lanternb.SetActive(false);
+                lanternc.SetActive(false);
+                lanternd.SetActive(false);
+                lanternn.SetActive(false);
+                pagea.SetActive(false);
 
             }
 
@@ -199,6 +218,15 @@ public class PlayerController : MonoBehaviour
 
                 inventory.Add("Lantern Peice a");
                 lanternPeices = lanternPeices + 1;
+                selectedObj = ("Lantern Peice a");
+                keyt.SetActive(false);
+                keyb.SetActive(false);
+                lanterna.SetActive(true);
+                lanternb.SetActive(false);
+                lanternc.SetActive(false);
+                lanternd.SetActive(false);
+                lanternn.SetActive(false);
+                pagea.SetActive(false);
 
             }
 
@@ -207,6 +235,15 @@ public class PlayerController : MonoBehaviour
 
                 inventory.Add("Lantern Peice b");
                 lanternPeices = lanternPeices + 1;
+                selectedObj = ("Lantern Peice b");
+                keyt.SetActive(false);
+                keyb.SetActive(false);
+                lanterna.SetActive(false);
+                lanternb.SetActive(true);
+                lanternc.SetActive(false);
+                lanternd.SetActive(false);
+                lanternn.SetActive(false);
+                pagea.SetActive(false);
 
             }
 
@@ -215,6 +252,15 @@ public class PlayerController : MonoBehaviour
 
                 inventory.Add("Lantern Peice c");
                 lanternPeices = lanternPeices + 1;
+                selectedObj = ("Lantern Peice c");
+                keyt.SetActive(false);
+                keyb.SetActive(false);
+                lanterna.SetActive(false);
+                lanternb.SetActive(false);
+                lanternc.SetActive(true);
+                lanternd.SetActive(false);
+                lanternn.SetActive(false);
+                pagea.SetActive(false);
 
             }
 
@@ -223,6 +269,15 @@ public class PlayerController : MonoBehaviour
 
                 inventory.Add("Lantern Peice d");
                 lanternPeices = lanternPeices + 1;
+                selectedObj = ("Lantern Peice d");
+                keyt.SetActive(false);
+                keyb.SetActive(false);
+                lanterna.SetActive(false);
+                lanternb.SetActive(false);
+                lanternc.SetActive(false);
+                lanternd.SetActive(true);
+                lanternn.SetActive(false);
+                pagea.SetActive(false);
 
             }
 
@@ -230,6 +285,15 @@ public class PlayerController : MonoBehaviour
             {
 
                 inventory.Add("Normal Lantern");
+                selectedObj = ("Normal Lantern");
+                keyt.SetActive(false);
+                keyb.SetActive(false);
+                lanterna.SetActive(false);
+                lanternb.SetActive(false);
+                lanternc.SetActive(false);
+                lanternd.SetActive(false);
+                lanternn.SetActive(true);
+                pagea.SetActive(false);
 
             }
 
@@ -237,12 +301,36 @@ public class PlayerController : MonoBehaviour
             {
 
                 inventory.Add("Lore Page Spell");
+                selectedObj = ("Lore Page Spell");
+                keyt.SetActive(false);
+                keyb.SetActive(false);
+                lanterna.SetActive(false);
+                lanternb.SetActive(false);
+                lanternc.SetActive(false);
+                lanternd.SetActive(false);
+                lanternn.SetActive(false);
+                pagea.SetActive(true);
 
             }
 
             destroy.Destroy();
 
         }
+
+    }
+
+    public void Deselect (InputAction.CallbackContext context)
+    {
+
+        selectedObj = ("");
+        keyt.SetActive(false);
+        keyb.SetActive(false);
+        lanterna.SetActive(false);
+        lanternb.SetActive(false);
+        lanternc.SetActive(false);
+        lanternd.SetActive(false);
+        lanternn.SetActive(false);
+        pagea.SetActive(false);
 
     }
 

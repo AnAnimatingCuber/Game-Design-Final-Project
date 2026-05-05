@@ -22,6 +22,14 @@ public class PlayerController : MonoBehaviour
     public GameObject lanternd;
     public GameObject lanternn;
     public GameObject pagea;
+    public GameObject ikeyt;
+    public GameObject ikeyb;
+    public GameObject ilanterna;
+    public GameObject ilanternb;
+    public GameObject ilanternc;
+    public GameObject ilanternd;
+    public GameObject ilanternn;
+    public GameObject ipagea;
     public string objtag;
     public int keys = 0;
     public int lanternPeices = 0;
@@ -193,6 +201,7 @@ public class PlayerController : MonoBehaviour
                 lanternd.SetActive(false);
                 lanternn.SetActive(false);
                 pagea.SetActive(false);
+                ikeyt.SetActive(true);
 
             }
 
@@ -210,6 +219,7 @@ public class PlayerController : MonoBehaviour
                 lanternd.SetActive(false);
                 lanternn.SetActive(false);
                 pagea.SetActive(false);
+                ikeyb.SetActive(true);
 
             }
 
@@ -227,6 +237,7 @@ public class PlayerController : MonoBehaviour
                 lanternd.SetActive(false);
                 lanternn.SetActive(false);
                 pagea.SetActive(false);
+                ilanterna.SetActive(true);
 
             }
 
@@ -244,6 +255,7 @@ public class PlayerController : MonoBehaviour
                 lanternd.SetActive(false);
                 lanternn.SetActive(false);
                 pagea.SetActive(false);
+                ilanternb.SetActive(true);
 
             }
 
@@ -261,6 +273,7 @@ public class PlayerController : MonoBehaviour
                 lanternd.SetActive(false);
                 lanternn.SetActive(false);
                 pagea.SetActive(false);
+                ilanternc.SetActive(true);
 
             }
 
@@ -278,6 +291,7 @@ public class PlayerController : MonoBehaviour
                 lanternd.SetActive(true);
                 lanternn.SetActive(false);
                 pagea.SetActive(false);
+                ilanternd.SetActive(true);
 
             }
 
@@ -294,6 +308,7 @@ public class PlayerController : MonoBehaviour
                 lanternd.SetActive(false);
                 lanternn.SetActive(true);
                 pagea.SetActive(false);
+                ilanternn.SetActive(true);
 
             }
 
@@ -310,6 +325,7 @@ public class PlayerController : MonoBehaviour
                 lanternd.SetActive(false);
                 lanternn.SetActive(false);
                 pagea.SetActive(true);
+                ipagea.SetActive(true);
 
             }
 
@@ -340,7 +356,6 @@ public class PlayerController : MonoBehaviour
         if (invOpen == false)
         {
 
-            gameplayCanvas.SetActive(false);
             inventoryCanvas.SetActive(true);
             invOpen = true;
 
@@ -350,7 +365,6 @@ public class PlayerController : MonoBehaviour
         {
 
             inventoryCanvas.SetActive(false);
-            gameplayCanvas.SetActive(true);
             invOpen = false;
 
         }

@@ -7,14 +7,16 @@ public class Transitions : MonoBehaviour
 {
     public Animator transitionAnim;
     public string sceneName;
+    public string loseScene;
     public GameObject startScreen;
     public GameObject instructionsScreen;
+    public GameObject timer;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
- 
+     
     }
 
     // Update is called once per frame
@@ -24,6 +26,7 @@ public class Transitions : MonoBehaviour
     }
 
     public void trigger(){
+        DontDestroyOnLoad(Instantiate(timer));
         StartCoroutine(LoadScene());
     }
 
@@ -32,6 +35,7 @@ public class Transitions : MonoBehaviour
           yield return new WaitForSeconds(.5f);
           SceneManager.LoadScene(sceneName);
     }
+
 
     public void quit(){
         Application.Quit();

@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Alik's Scene.unity
     guid: 505faa82cf809af48b6b73e5d9a9f785
+  - enabled: 1
+    path: Assets/Scenes/Lose Scene.unity
+    guid: 9a704f6f8ece00340aad20bb94376729
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

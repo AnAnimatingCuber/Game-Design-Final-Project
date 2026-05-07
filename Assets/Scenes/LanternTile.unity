@@ -902,11 +902,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Transitions
   transitionAnim: {fileID: 1634158273}
+<<<<<<< Updated upstream
   sceneName: Alik's Scene
   loseScene: Lose Scene
   startScreen: {fileID: 0}
   instructionsScreen: {fileID: 0}
   timer: {fileID: 8472670632062595760, guid: 5297f6edbd71acc448b120199f73d869, type: 3}
+=======
+  sceneName1: Alik's Scene
+  sceneName2: 
+  loseScene: 
+  startScreen: {fileID: 0}
+  instructionsScreen: {fileID: 0}
+  timer: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!4 &313335366
 Transform:
   m_ObjectHideFlags: 0

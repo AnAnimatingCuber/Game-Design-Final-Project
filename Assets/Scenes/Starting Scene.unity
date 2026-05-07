@@ -602,7 +602,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Transitions
   transitionAnim: {fileID: 1949080528}
-  sceneName: Alik's Scene
+  sceneName1: Alik's Scene
+  sceneName2: 
   loseScene: Lose Scene
   startScreen: {fileID: 1290010666}
   instructionsScreen: {fileID: 664785039}

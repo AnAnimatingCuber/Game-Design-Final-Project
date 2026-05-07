@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     public GameObject inventoryCanvas;
     public GameObject gameplayCanvas;
     public GameObject pauseCanvas;
-    public PickupScript destroy;
     public GameObject keyt;
     public GameObject keyb;
     public GameObject lanterna;
@@ -22,6 +21,8 @@ public class PlayerController : MonoBehaviour
     public GameObject lanternd;
     public GameObject lanternn;
     public GameObject pagea;
+    public GameObject keyr;
+    public GameObject lanternr;
     public GameObject ikeyt;
     public GameObject ikeyb;
     public GameObject ilanterna;
@@ -30,6 +31,8 @@ public class PlayerController : MonoBehaviour
     public GameObject ilanternd;
     public GameObject ilanternn;
     public GameObject ipagea;
+    public GameObject ikeyr;
+    public GameObject ilanternr;
     public GameObject skeyt;
     public GameObject skeyb;
     public GameObject slanterna;
@@ -38,12 +41,17 @@ public class PlayerController : MonoBehaviour
     public GameObject slanternd;
     public GameObject slanternn;
     public GameObject spagea;
+    public GameObject skeyr;
+    public GameObject slanternr;
     public string objtag;
     public int keys = 0;
     public int lanternPeices = 0;
     public string selectedObj;
     public List<string> inventory = new List<string>();
     
+    private PickupScript destroy;
+    private Transitions trigger1;
+    private Transitions trigger2;
     private Rigidbody2D character;
     private Animator animator;
     private Vector2 moveInput;
@@ -53,6 +61,9 @@ public class PlayerController : MonoBehaviour
     
         character = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        GameObject SceneManager = GameObject.Find("Scene Manager");
+        trigger1 = SceneManager.GetComponent<Transitions>();
+        trigger2 = SceneManager.GetComponent<Transitions>();
 
     }
 
@@ -209,6 +220,7 @@ public class PlayerController : MonoBehaviour
                 lanternd.SetActive(false);
                 lanternn.SetActive(false);
                 pagea.SetActive(false);
+                lanternr.SetActive(false);
                 ikeyt.SetActive(true);
                 ikeyb.SetActive(false);
                 ilanterna.SetActive(false);
@@ -217,7 +229,26 @@ public class PlayerController : MonoBehaviour
                 ilanternd.SetActive(false);
                 ilanternn.SetActive(false);
                 ipagea.SetActive(false);
+                ilanternr.SetActive(false);
                 skeyt.SetActive(true);
+
+                if(keys == 2)
+                {
+
+                    keyt.SetActive(false);
+                    keyb.SetActive(false);
+                    ikeyt.SetActive(false);
+                    ikeyb.SetActive(false);
+                    skeyt.SetActive(false);
+                    skeyb.SetActive(false);
+                    keyr.SetActive(true);
+                    ikeyr.SetActive(true);
+                    skeyr.SetActive(true);
+                    inventory.Add("Repaired Key");
+                    selectedObj = ("Repaired Key");
+                    trigger1.trigger1();
+
+                }
 
             }
 
@@ -235,6 +266,7 @@ public class PlayerController : MonoBehaviour
                 lanternd.SetActive(false);
                 lanternn.SetActive(false);
                 pagea.SetActive(false);
+                lanternr.SetActive(false);
                 ikeyt.SetActive(false);
                 ikeyb.SetActive(true);
                 ilanterna.SetActive(false);
@@ -243,7 +275,26 @@ public class PlayerController : MonoBehaviour
                 ilanternd.SetActive(false);
                 ilanternn.SetActive(false);
                 ipagea.SetActive(false);
+                ilanternr.SetActive(false);
                 skeyb.SetActive(true);
+
+                if(keys == 2)
+                {
+
+                    keyt.SetActive(false);
+                    keyb.SetActive(false);
+                    ikeyt.SetActive(false);
+                    ikeyb.SetActive(false);
+                    skeyt.SetActive(false);
+                    skeyb.SetActive(false);
+                    keyr.SetActive(true);
+                    ikeyr.SetActive(true);
+                    skeyr.SetActive(true);
+                    inventory.Add("Repaired Key");
+                    selectedObj = ("Repaired Key");
+                    trigger1.trigger1();
+
+                }
 
             }
 
@@ -261,6 +312,7 @@ public class PlayerController : MonoBehaviour
                 lanternd.SetActive(false);
                 lanternn.SetActive(false);
                 pagea.SetActive(false);
+                keyr.SetActive(false);
                 ikeyt.SetActive(false);
                 ikeyb.SetActive(false);
                 ilanterna.SetActive(true);
@@ -269,7 +321,32 @@ public class PlayerController : MonoBehaviour
                 ilanternd.SetActive(false);
                 ilanternn.SetActive(false);
                 ipagea.SetActive(false);
+                ikeyr.SetActive(false);
                 slanterna.SetActive(true);
+
+                if(lanternPeices == 4)
+                {
+
+                    lanterna.SetActive(false);
+                    lanternb.SetActive(false);
+                    lanternc.SetActive(false);
+                    lanternd.SetActive(false);
+                    ilanterna.SetActive(false);
+                    ilanternb.SetActive(false);
+                    ilanternc.SetActive(false);
+                    ilanternd.SetActive(false);
+                    slanterna.SetActive(false);
+                    slanternb.SetActive(false);
+                    slanternc.SetActive(false);
+                    slanternd.SetActive(false);
+                    lanternr.SetActive(true);
+                    ilanternr.SetActive(true);
+                    slanternr.SetActive(true);
+                    inventory.Add("Repaired Lantern");
+                    selectedObj = ("Repaired Lantern");
+                    trigger2.trigger2();
+
+                }
 
             }
 
@@ -287,6 +364,7 @@ public class PlayerController : MonoBehaviour
                 lanternd.SetActive(false);
                 lanternn.SetActive(false);
                 pagea.SetActive(false);
+                keyr.SetActive(false);
                 ikeyt.SetActive(false);
                 ikeyb.SetActive(false);
                 ilanterna.SetActive(false);
@@ -295,7 +373,32 @@ public class PlayerController : MonoBehaviour
                 ilanternd.SetActive(false);
                 ilanternn.SetActive(false);
                 ipagea.SetActive(false);
+                ikeyr.SetActive(false);
                 slanternb.SetActive(true);
+
+                if(lanternPeices == 4)
+                {
+
+                    lanterna.SetActive(false);
+                    lanternb.SetActive(false);
+                    lanternc.SetActive(false);
+                    lanternd.SetActive(false);
+                    ilanterna.SetActive(false);
+                    ilanternb.SetActive(false);
+                    ilanternc.SetActive(false);
+                    ilanternd.SetActive(false);
+                    slanterna.SetActive(false);
+                    slanternb.SetActive(false);
+                    slanternc.SetActive(false);
+                    slanternd.SetActive(false);
+                    lanternr.SetActive(true);
+                    ilanternr.SetActive(true);
+                    slanternr.SetActive(true);
+                    inventory.Add("Repaired Lantern");
+                    selectedObj = ("Repaired Lantern");
+                    trigger2.trigger2();
+
+                }
 
             }
 
@@ -313,6 +416,7 @@ public class PlayerController : MonoBehaviour
                 lanternd.SetActive(false);
                 lanternn.SetActive(false);
                 pagea.SetActive(false);
+                keyr.SetActive(false);
                 ikeyt.SetActive(false);
                 ikeyb.SetActive(false);
                 ilanterna.SetActive(false);
@@ -321,7 +425,32 @@ public class PlayerController : MonoBehaviour
                 ilanternd.SetActive(false);
                 ilanternn.SetActive(false);
                 ipagea.SetActive(false);
+                ikeyr.SetActive(false);
                 slanternc.SetActive(true);
+
+                if(lanternPeices == 4)
+                {
+
+                    lanterna.SetActive(false);
+                    lanternb.SetActive(false);
+                    lanternc.SetActive(false);
+                    lanternd.SetActive(false);
+                    ilanterna.SetActive(false);
+                    ilanternb.SetActive(false);
+                    ilanternc.SetActive(false);
+                    ilanternd.SetActive(false);
+                    slanterna.SetActive(false);
+                    slanternb.SetActive(false);
+                    slanternc.SetActive(false);
+                    slanternd.SetActive(false);
+                    lanternr.SetActive(true);
+                    ilanternr.SetActive(true);
+                    slanternr.SetActive(true);
+                    inventory.Add("Repaired Lantern");
+                    selectedObj = ("Repaired Lantern");
+                    trigger2.trigger2();
+
+                }
 
             }
 
@@ -339,6 +468,7 @@ public class PlayerController : MonoBehaviour
                 lanternd.SetActive(true);
                 lanternn.SetActive(false);
                 pagea.SetActive(false);
+                keyr.SetActive(false);
                 ikeyt.SetActive(false);
                 ikeyb.SetActive(false);
                 ilanterna.SetActive(false);
@@ -347,7 +477,32 @@ public class PlayerController : MonoBehaviour
                 ilanternd.SetActive(true);
                 ilanternn.SetActive(false);
                 ipagea.SetActive(false);
+                keyr.SetActive(false);
                 slanternd.SetActive(true);
+
+                if(lanternPeices == 4)
+                {
+
+                    lanterna.SetActive(false);
+                    lanternb.SetActive(false);
+                    lanternc.SetActive(false);
+                    lanternd.SetActive(false);
+                    ilanterna.SetActive(false);
+                    ilanternb.SetActive(false);
+                    ilanternc.SetActive(false);
+                    ilanternd.SetActive(false);
+                    slanterna.SetActive(false);
+                    slanternb.SetActive(false);
+                    slanternc.SetActive(false);
+                    slanternd.SetActive(false);
+                    lanternr.SetActive(true);
+                    ilanternr.SetActive(true);
+                    slanternr.SetActive(true);
+                    inventory.Add("Repaired Lantern");
+                    selectedObj = ("Repaired Lantern");
+                    trigger2.trigger2();
+
+                }
 
             }
 
@@ -364,12 +519,16 @@ public class PlayerController : MonoBehaviour
                 lanternd.SetActive(false);
                 lanternn.SetActive(true);
                 pagea.SetActive(false);
+                keyr.SetActive(false);
+                lanternr.SetActive(false);
                 ilanterna.SetActive(false);
                 ilanternb.SetActive(false);
                 ilanternc.SetActive(false);
                 ilanternd.SetActive(false);
                 ilanternn.SetActive(true);
                 ipagea.SetActive(false);
+                ikeyr.SetActive(false);
+                ilanternr.SetActive(false);
                 slanternn.SetActive(true);
 
             }
@@ -387,6 +546,8 @@ public class PlayerController : MonoBehaviour
                 lanternd.SetActive(false);
                 lanternn.SetActive(false);
                 pagea.SetActive(true);
+                keyr.SetActive(false);
+                lanternr.SetActive(false);
                 ikeyt.SetActive(false);
                 ikeyb.SetActive(false);
                 ilanterna.SetActive(false);
@@ -395,6 +556,8 @@ public class PlayerController : MonoBehaviour
                 ilanternd.SetActive(false);
                 ilanternn.SetActive(false);
                 ipagea.SetActive(true);
+                ikeyr.SetActive(false);
+                ilanternr.SetActive(false);
                 spagea.SetActive(true);
 
             }
@@ -417,6 +580,8 @@ public class PlayerController : MonoBehaviour
         lanternd.SetActive(false);
         lanternn.SetActive(false);
         pagea.SetActive(false);
+        keyr.SetActive(false);
+        lanternr.SetActive(false);
         ikeyt.SetActive(false);
         ikeyb.SetActive(false);
         ilanterna.SetActive(false);
@@ -425,6 +590,8 @@ public class PlayerController : MonoBehaviour
         ilanternd.SetActive(false);
         ilanternn.SetActive(false);
         ipagea.SetActive(false);
+        ikeyr.SetActive(false);
+        ilanternr.SetActive(false);
 
     }
 
@@ -456,6 +623,13 @@ public class PlayerController : MonoBehaviour
 
         Vector2 moveVector = new Vector2(moveInput.x, moveInput.y);
         character.MovePosition(character.position + moveVector * speed * Time.fixedDeltaTime);
+
+    }
+
+    void Update()
+    {
+
+
 
     }
 

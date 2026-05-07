@@ -50,4 +50,8 @@ public class Transitions : MonoBehaviour
         instructionsScreen.SetActive(false);
         startScreen.SetActive(true);
     }
+
+    public void restart(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

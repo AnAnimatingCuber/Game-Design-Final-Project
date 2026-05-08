@@ -6,8 +6,7 @@ using System.Collections;
 public class Transitions : MonoBehaviour
 {
     public Animator transitionAnim;
-    public string sceneName1;
-    public string sceneName2;
+    public string sceneName;
     public string loseScene;
     public GameObject startScreen;
     public GameObject instructionsScreen;
@@ -26,26 +25,15 @@ public class Transitions : MonoBehaviour
     
     }
 
-    public void trigger1(){
+    public void trigger(){
         DontDestroyOnLoad(Instantiate(timer));
-        StartCoroutine(LoadScene1());
+        StartCoroutine(LoadScene());
     }
 
-    IEnumerator LoadScene1(){
+    IEnumerator LoadScene(){
           transitionAnim.SetTrigger("endTransition");
           yield return new WaitForSeconds(.5f);
-          SceneManager.LoadScene(sceneName1);
-    }
-
-    public void trigger2(){
-        DontDestroyOnLoad(Instantiate(timer));
-        StartCoroutine(LoadScene2());
-    }
-
-    IEnumerator LoadScene2(){
-          transitionAnim.SetTrigger("endTransition");
-          yield return new WaitForSeconds(.5f);
-          SceneManager.LoadScene(sceneName2);
+          SceneManager.LoadScene(sceneName);
     }
 
 

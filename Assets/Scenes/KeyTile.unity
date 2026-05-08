@@ -303,7 +303,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Restart
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 09e92739ad52f1b459e34c4c153d224f, type: 2}
   m_sharedMaterial: {fileID: 4838601636333715514, guid: 09e92739ad52f1b459e34c4c153d224f, type: 2}
@@ -770,7 +770,7 @@ GameObject:
   - component: {fileID: 313335366}
   - component: {fileID: 313335365}
   m_Layer: 0
-  m_Name: SceneManager
+  m_Name: SceneChanger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -789,7 +789,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Transitions
   transitionAnim: {fileID: 1634158273}
-  sceneName: Alik's Scene
+  sceneName1: Starting Scene
+  sceneName2: 
   loseScene: Lose Scene
   startScreen: {fileID: 0}
   instructionsScreen: {fileID: 0}
@@ -1797,7 +1798,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 313335365}
         m_TargetAssemblyTypeName: Transitions, Assembly-CSharp
-        m_MethodName: trigger
+        m_MethodName: trigger1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2882,7 +2883,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 313335365}
         m_TargetAssemblyTypeName: Transitions, Assembly-CSharp
-        m_MethodName: trigger
+        m_MethodName: trigger1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4495,7 +4496,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 313335365}
         m_TargetAssemblyTypeName: Transitions, Assembly-CSharp
-        m_MethodName: trigger
+        m_MethodName: trigger1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

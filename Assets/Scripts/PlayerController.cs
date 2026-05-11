@@ -13,36 +13,8 @@ public class PlayerController : MonoBehaviour
     public GameObject inventoryCanvas;
     public GameObject gameplayCanvas;
     public GameObject pauseCanvas;
-    public GameObject keyt;
-    public GameObject keyb;
-    public GameObject lanterna;
-    public GameObject lanternb;
-    public GameObject lanternc;
-    public GameObject lanternd;
-    public GameObject lanternn;
-    public GameObject pagea;
-    public GameObject keyr;
-    public GameObject lanternr;
-    public GameObject ikeyt;
-    public GameObject ikeyb;
-    public GameObject ilanterna;
-    public GameObject ilanternb;
-    public GameObject ilanternc;
-    public GameObject ilanternd;
-    public GameObject ilanternn;
-    public GameObject ipagea;
-    public GameObject ikeyr;
-    public GameObject ilanternr;
-    public GameObject skeyt;
-    public GameObject skeyb;
-    public GameObject slanterna;
-    public GameObject slanternb;
-    public GameObject slanternc;
-    public GameObject slanternd;
-    public GameObject slanternn;
-    public GameObject spagea;
-    public GameObject skeyr;
-    public GameObject slanternr;
+    public Stuff stuffScript;
+
     public string objtag;
     public int keys = 0;
     public int lanternPeices = 0;
@@ -56,6 +28,11 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private Vector2 moveInput;
 
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     void Start()
     { 
     
@@ -66,6 +43,8 @@ public class PlayerController : MonoBehaviour
         trigger2 = SceneChanger.GetComponent<Transitions>();
 
     }
+
+
 
     public void OnMove(InputAction.CallbackContext context)
     { 
@@ -215,7 +194,7 @@ public class PlayerController : MonoBehaviour
                 if(keys == 2)
                 {
 
-                    keyt.SetActive(false);
+                    stuffScript.keyt.SetActive(false);
                     keyb.SetActive(false);
                     ikeyt.SetActive(false);
                     ikeyb.SetActive(false);
@@ -235,7 +214,7 @@ public class PlayerController : MonoBehaviour
 
                     inventory.Add("Keyt");
                     selectedObj = ("Keyt");
-                    keyt.SetActive(true);
+                    stuffScript.keyt.SetActive(true);
                     keyb.SetActive(false);
                     lanterna.SetActive(false);
                     lanternb.SetActive(false);
@@ -268,7 +247,7 @@ public class PlayerController : MonoBehaviour
                 if(keys == 2)
                 {
 
-                    keyt.SetActive(false);
+                    stuffScript.keyt.SetActive(false);
                     keyb.SetActive(false);
                     ikeyt.SetActive(false);
                     ikeyb.SetActive(false);
@@ -289,7 +268,7 @@ public class PlayerController : MonoBehaviour
                     inventory.Add("Keyb");
                     keys = keys + 1;
                     selectedObj = ("Keyb");
-                    keyt.SetActive(false);
+                    stuffScript.keyt.SetActive(false);
                     keyb.SetActive(true);
                     lanterna.SetActive(false);
                     lanternb.SetActive(false);
@@ -319,7 +298,7 @@ public class PlayerController : MonoBehaviour
                 inventory.Add("Lantern Peice a");
                 lanternPeices = lanternPeices + 1;
                 selectedObj = ("Lantern Peice a");
-                keyt.SetActive(false);
+                stuffScript.keyt.SetActive(false);
                 keyb.SetActive(false);
                 lanterna.SetActive(true);
                 lanternb.SetActive(false);
@@ -339,29 +318,29 @@ public class PlayerController : MonoBehaviour
                 ikeyr.SetActive(false);
                 slanterna.SetActive(true);
 
-                //if(lanternPeices == 4)
-                //{
+                if(lanternPeices == 4)
+                {
 
-                //    lanterna.SetActive(false);
-                //    lanternb.SetActive(false);
-                //    lanternc.SetActive(false);
-                //    lanternd.SetActive(false);
-                //    ilanterna.SetActive(false);
-                //    ilanternb.SetActive(false);
-                //    ilanternc.SetActive(false);
-                //    ilanternd.SetActive(false);
-                //    slanterna.SetActive(false);
-                //    slanternb.SetActive(false);
-                //    slanternc.SetActive(false);
-                //    slanternd.SetActive(false);
-                //    lanternr.SetActive(true);
-                //    ilanternr.SetActive(true);
-                //    slanternr.SetActive(true);
-                //    inventory.Add("Repaired Lantern");
-                //    selectedObj = ("Repaired Lantern");
-                //    trigger2.trigger2();
+                    lanterna.SetActive(false);
+                    lanternb.SetActive(false);
+                    lanternc.SetActive(false);
+                    lanternd.SetActive(false);
+                    ilanterna.SetActive(false);
+                    ilanternb.SetActive(false);
+                    ilanternc.SetActive(false);
+                    ilanternd.SetActive(false);
+                    slanterna.SetActive(false);
+                    slanternb.SetActive(false);
+                    slanternc.SetActive(false);
+                    slanternd.SetActive(false);
+                    lanternr.SetActive(true);
+                    ilanternr.SetActive(true);
+                    slanternr.SetActive(true);
+                    inventory.Add("Repaired Lantern");
+                    selectedObj = ("Repaired Lantern");
+                    trigger2.trigger2();
 
-                //}
+                }
 
             }
 

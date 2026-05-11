@@ -303,7 +303,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Restart
+  m_text: Continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 09e92739ad52f1b459e34c4c153d224f, type: 2}
   m_sharedMaterial: {fileID: 4838601636333715514, guid: 09e92739ad52f1b459e34c4c153d224f, type: 2}
@@ -330,8 +330,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -789,7 +789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Transitions
   transitionAnim: {fileID: 1634158273}
-  sceneName1: Starting Scene
+  sceneName1: Alik's Scene
   sceneName2: 
   loseScene: Lose Scene
   startScreen: {fileID: 0}

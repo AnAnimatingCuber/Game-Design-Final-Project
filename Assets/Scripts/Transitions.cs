@@ -12,10 +12,12 @@ public class Transitions : MonoBehaviour
     public GameObject startScreen;
     public GameObject instructionsScreen;
     public GameObject timer;
+    public GameObject player;
 
     void Start()
     {
      
+     player = null;
     }
 
     // Update is called once per frame
@@ -32,6 +34,15 @@ public class Transitions : MonoBehaviour
 
     IEnumerator LoadScene1()
     {
+        if(player == null)
+        {
+            player = GameObject.Find("Player");
+            
+        }
+        if(player != null)
+        {
+            player.SetActive(!player.activeSelf);
+        }
         transitionAnim.SetTrigger("endTransition");
         yield return new WaitForSeconds(.5f);
         SceneManager.LoadScene(sceneName1);
@@ -45,6 +56,15 @@ public class Transitions : MonoBehaviour
 
     IEnumerator LoadScene2()
     {
+        if(player == null)
+        {
+            player = GameObject.Find("Player");
+            
+        }
+        if(player != null)
+        {
+            player.SetActive(!player.activeSelf);
+        }
         transitionAnim.SetTrigger("endTransition");
         yield return new WaitForSeconds(.5f);
         SceneManager.LoadScene(sceneName2);

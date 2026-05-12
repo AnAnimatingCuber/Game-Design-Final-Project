@@ -16,22 +16,16 @@ public class PlayerController : MonoBehaviour
     public Stuff stuffScript;
 
     public string objtag;
-    public int keys = 0;
-    public int lanternPeices = 0;
+   
     public string selectedObj;
-    public List<string> inventory = new List<string>();
     
-    private PickupScript destroy;
-    private Transitions trigger1;
-    private Transitions trigger2;
+    
+    public PickupScript destroy;
+    public Transitions trigger1;
+    public Transitions trigger2;
     private Rigidbody2D character;
     private Animator animator;
     private Vector2 moveInput;
-
-    void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
 
     void Start()
     { 
@@ -95,79 +89,9 @@ public class PlayerController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-
         pickUpAllowed = true;
-        if (other.gameObject.tag == "keyt")
-        {
 
-            objtag = "kt";
-            GameObject key_piece_top_0 = GameObject.Find("key_piece_top_0");
-            destroy = key_piece_top_0.GetComponent<PickupScript>();
-
-        }
-
-        else if (other.gameObject.tag == "keyb")
-        {
-
-            objtag = "kb";
-            GameObject key_piece_bottom_0 = GameObject.Find("key_piece_bottom_0");
-            destroy = key_piece_bottom_0.GetComponent<PickupScript>();
-
-        }
-
-        else if (other.gameObject.tag == "lanterna")
-        {
-
-            objtag = "la";
-            GameObject lantern_piece_one_0 = GameObject.Find("lantern_piece_one_0");
-            destroy = lantern_piece_one_0.GetComponent<PickupScript>();
-
-        }
-
-        else if (other.gameObject.tag == "lanternb")
-        {
-
-            objtag = "lb";
-            GameObject lantern_piece_two_0 = GameObject.Find("lantern_piece_two_0");
-            destroy = lantern_piece_two_0.GetComponent<PickupScript>();
-
-        }
-
-        else if (other.gameObject.tag == "lanternc")
-        {
-
-            objtag = "lc";
-            GameObject lantern_piece_three_0 = GameObject.Find("lantern_piece_three_0");
-            destroy = lantern_piece_three_0.GetComponent<PickupScript>();
-
-        }
-
-        else if (other.gameObject.tag == "lanternd")
-        {
-
-            objtag = "ld";
-            GameObject lantern_piece_four_0 = GameObject.Find("lantern_piece_four_0");
-            destroy = lantern_piece_four_0.GetComponent<PickupScript>();
-
-        }
-
-        else if (other.gameObject.tag == "lantern")
-        {
-
-            objtag = "lantern";
-            GameObject normal_lantern_0 = GameObject.Find("normal_lantern_0");
-            destroy = normal_lantern_0.GetComponent<PickupScript>();
-
-        }
-
-        else if (other.gameObject.tag == "pagea")
-        {
-
-            objtag = "pa";
-            GameObject combine_spell_0 = GameObject.Find("combine_spell_0");
-            destroy = combine_spell_0.GetComponent<PickupScript>();
-
-        }
+       objtag = stuffScript.enterTrigger(other.gameObject);
 
     }
 
@@ -187,300 +111,64 @@ public class PlayerController : MonoBehaviour
 
             if (objtag == "kt")
             {   
+                stuffScript.kt();
+                trigger1.trigger1();
 
-                Debug.Log(keys);
-                keys = keys + 1;
 
-                if(keys == 2)
-                {
-
-                    stuffScript.keyt.SetActive(false);
-                    keyb.SetActive(false);
-                    ikeyt.SetActive(false);
-                    ikeyb.SetActive(false);
-                    skeyt.SetActive(false);
-                    skeyb.SetActive(false);
-                    keyr.SetActive(true);
-                    ikeyr.SetActive(true);
-                    skeyr.SetActive(true);
-                    inventory.Add("Repaired Key");
-                    selectedObj = ("Repaired Key");
-                    trigger1.trigger1();
-
-                }
-
-                else
-                {
-
-                    inventory.Add("Keyt");
-                    selectedObj = ("Keyt");
-                    stuffScript.keyt.SetActive(true);
-                    keyb.SetActive(false);
-                    lanterna.SetActive(false);
-                    lanternb.SetActive(false);
-                    lanternc.SetActive(false);
-                    lanternd.SetActive(false);
-                    lanternn.SetActive(false);
-                    pagea.SetActive(false);
-                    lanternr.SetActive(false);
-                    ikeyt.SetActive(true);
-                    ikeyb.SetActive(false);
-                    ilanterna.SetActive(false);
-                    ilanternb.SetActive(false);
-                    ilanternc.SetActive(false);
-                    ilanternd.SetActive(false);
-                    ilanternn.SetActive(false);
-                    ipagea.SetActive(false);
-                    ilanternr.SetActive(false);
-                    skeyt.SetActive(true);
-
-                }
+               
 
             }
 
             else if (objtag == "kb")
             {
+                stuffScript.kb();
 
-                Debug.Log(keys);
-                keys = keys + 1;
-
-                if(keys == 2)
-                {
-
-                    stuffScript.keyt.SetActive(false);
-                    keyb.SetActive(false);
-                    ikeyt.SetActive(false);
-                    ikeyb.SetActive(false);
-                    skeyt.SetActive(false);
-                    skeyb.SetActive(false);
-                    keyr.SetActive(true);
-                    ikeyr.SetActive(true);
-                    skeyr.SetActive(true);
-                    inventory.Add("Repaired Key");
-                    selectedObj = ("Repaired Key");
-                    trigger1.trigger1();
-
-                }
-
-                else
-                {
-
-                    inventory.Add("Keyb");
-                    keys = keys + 1;
-                    selectedObj = ("Keyb");
-                    stuffScript.keyt.SetActive(false);
-                    keyb.SetActive(true);
-                    lanterna.SetActive(false);
-                    lanternb.SetActive(false);
-                    lanternc.SetActive(false);
-                    lanternd.SetActive(false);
-                    lanternn.SetActive(false);
-                    pagea.SetActive(false);
-                    lanternr.SetActive(false);
-                    ikeyt.SetActive(false);
-                    ikeyb.SetActive(true);
-                    ilanterna.SetActive(false);
-                    ilanternb.SetActive(false);
-                    ilanternc.SetActive(false);
-                    ilanternd.SetActive(false);
-                    ilanternn.SetActive(false);
-                    ipagea.SetActive(false);
-                    ilanternr.SetActive(false);
-                    skeyb.SetActive(true);
-
-                }
-
+               
             }
 
             else if (objtag == "la")
             {
+                stuffScript.la();
 
-                inventory.Add("Lantern Peice a");
-                lanternPeices = lanternPeices + 1;
-                selectedObj = ("Lantern Peice a");
-                stuffScript.keyt.SetActive(false);
-                keyb.SetActive(false);
-                lanterna.SetActive(true);
-                lanternb.SetActive(false);
-                lanternc.SetActive(false);
-                lanternd.SetActive(false);
-                lanternn.SetActive(false);
-                pagea.SetActive(false);
-                keyr.SetActive(false);
-                ikeyt.SetActive(false);
-                ikeyb.SetActive(false);
-                ilanterna.SetActive(true);
-                ilanternb.SetActive(false);
-                ilanternc.SetActive(false);
-                ilanternd.SetActive(false);
-                ilanternn.SetActive(false);
-                ipagea.SetActive(false);
-                ikeyr.SetActive(false);
-                slanterna.SetActive(true);
 
-                if(lanternPeices == 4)
-                {
-
-                    lanterna.SetActive(false);
-                    lanternb.SetActive(false);
-                    lanternc.SetActive(false);
-                    lanternd.SetActive(false);
-                    ilanterna.SetActive(false);
-                    ilanternb.SetActive(false);
-                    ilanternc.SetActive(false);
-                    ilanternd.SetActive(false);
-                    slanterna.SetActive(false);
-                    slanternb.SetActive(false);
-                    slanternc.SetActive(false);
-                    slanternd.SetActive(false);
-                    lanternr.SetActive(true);
-                    ilanternr.SetActive(true);
-                    slanternr.SetActive(true);
-                    inventory.Add("Repaired Lantern");
-                    selectedObj = ("Repaired Lantern");
-                    trigger2.trigger2();
-
-                }
 
             }
 
             else if (objtag == "lb")
             {
+                stuffScript.lb();
 
-                inventory.Add("Lantern Peice b");
-                lanternPeices = lanternPeices + 1;
-                selectedObj = ("Lantern Peice b");
-                keyt.SetActive(false);
-                keyb.SetActive(false);
-                lanterna.SetActive(false);
-                lanternb.SetActive(true);
-                lanternc.SetActive(false);
-                lanternd.SetActive(false);
-                lanternn.SetActive(false);
-                pagea.SetActive(false);
-                keyr.SetActive(false);
-                ikeyt.SetActive(false);
-                ikeyb.SetActive(false);
-                ilanterna.SetActive(false);
-                ilanternb.SetActive(true);
-                ilanternc.SetActive(false);
-                ilanternd.SetActive(false);
-                ilanternn.SetActive(false);
-                ipagea.SetActive(false);
-                ikeyr.SetActive(false);
-                slanternb.SetActive(true);
+
 
             }
 
             else if (objtag == "lc")
             {
+                stuffScript.lc();
 
-                inventory.Add("Lantern Peice c");
-                lanternPeices = lanternPeices + 1;
-                selectedObj = ("Lantern Peice c");
-                keyt.SetActive(false);
-                keyb.SetActive(false);
-                lanterna.SetActive(false);
-                lanternb.SetActive(false);
-                lanternc.SetActive(true);
-                lanternd.SetActive(false);
-                lanternn.SetActive(false);
-                pagea.SetActive(false);
-                keyr.SetActive(false);
-                ikeyt.SetActive(false);
-                ikeyb.SetActive(false);
-                ilanterna.SetActive(false);
-                ilanternb.SetActive(false);
-                ilanternc.SetActive(true);
-                ilanternd.SetActive(false);
-                ilanternn.SetActive(false);
-                ipagea.SetActive(false);
-                ikeyr.SetActive(false);
-                slanternc.SetActive(true);
 
             }
 
             else if (objtag == "ld")
             {
+                stuffScript.ld();
 
-                inventory.Add("Lantern Peice d");
-                lanternPeices = lanternPeices + 1;
-                selectedObj = ("Lantern Peice d");
-                keyt.SetActive(false);
-                keyb.SetActive(false);
-                lanterna.SetActive(false);
-                lanternb.SetActive(false);
-                lanternc.SetActive(false);
-                lanternd.SetActive(true);
-                lanternn.SetActive(false);
-                pagea.SetActive(false);
-                keyr.SetActive(false);
-                ikeyt.SetActive(false);
-                ikeyb.SetActive(false);
-                ilanterna.SetActive(false);
-                ilanternb.SetActive(false);
-                ilanternc.SetActive(false);
-                ilanternd.SetActive(true);
-                ilanternn.SetActive(false);
-                ipagea.SetActive(false);
-                keyr.SetActive(false);
-                slanternd.SetActive(true);
 
             }
 
             else if (objtag == "lantern")
             {
+                stuffScript.lantern();
 
-                inventory.Add("Normal Lantern");
-                selectedObj = ("Normal Lantern");
-                keyt.SetActive(false);
-                keyb.SetActive(false);
-                lanterna.SetActive(false);
-                lanternb.SetActive(false);
-                lanternc.SetActive(false);
-                lanternd.SetActive(false);
-                lanternn.SetActive(true);
-                pagea.SetActive(false);
-                keyr.SetActive(false);
-                lanternr.SetActive(false);
-                ilanterna.SetActive(false);
-                ilanternb.SetActive(false);
-                ilanternc.SetActive(false);
-                ilanternd.SetActive(false);
-                ilanternn.SetActive(true);
-                ipagea.SetActive(false);
-                ikeyr.SetActive(false);
-                ilanternr.SetActive(false);
-                slanternn.SetActive(true);
+
 
             }
 
             else if (objtag == "pa")
             {
+                stuffScript.pa();
 
-                inventory.Add("Lore Page Spell");
-                selectedObj = ("Lore Page Spell");
-                keyt.SetActive(false);
-                keyb.SetActive(false);
-                lanterna.SetActive(false);
-                lanternb.SetActive(false);
-                lanternc.SetActive(false);
-                lanternd.SetActive(false);
-                lanternn.SetActive(false);
-                pagea.SetActive(true);
-                keyr.SetActive(false);
-                lanternr.SetActive(false);
-                ikeyt.SetActive(false);
-                ikeyb.SetActive(false);
-                ilanterna.SetActive(false);
-                ilanternb.SetActive(false);
-                ilanternc.SetActive(false);
-                ilanternd.SetActive(false);
-                ilanternn.SetActive(false);
-                ipagea.SetActive(true);
-                ikeyr.SetActive(false);
-                ilanternr.SetActive(false);
-                spagea.SetActive(true);
+
 
             }
 
@@ -492,28 +180,8 @@ public class PlayerController : MonoBehaviour
 
     public void Deselect (InputAction.CallbackContext context)
     {
+        stuffScript.ds();
 
-        selectedObj = ("");
-        keyt.SetActive(false);
-        keyb.SetActive(false);
-        lanterna.SetActive(false);
-        lanternb.SetActive(false);
-        lanternc.SetActive(false);
-        lanternd.SetActive(false);
-        lanternn.SetActive(false);
-        pagea.SetActive(false);
-        keyr.SetActive(false);
-        lanternr.SetActive(false);
-        ikeyt.SetActive(false);
-        ikeyb.SetActive(false);
-        ilanterna.SetActive(false);
-        ilanternb.SetActive(false);
-        ilanternc.SetActive(false);
-        ilanternd.SetActive(false);
-        ilanternn.SetActive(false);
-        ipagea.SetActive(false);
-        ikeyr.SetActive(false);
-        ilanternr.SetActive(false);
 
     }
 

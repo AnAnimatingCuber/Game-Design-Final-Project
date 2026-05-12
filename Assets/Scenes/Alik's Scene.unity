@@ -37402,6 +37402,84 @@ Transform:
   - {fileID: 1481884134}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &309791895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 309791897}
+  - component: {fileID: 309791896}
+  m_Layer: 0
+  m_Name: StuffHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &309791896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309791895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e318d1e2abe027a438194c96b5991ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Stuff
+  keyt: {fileID: 1683325207}
+  keyb: {fileID: 1927574696}
+  lanterna: {fileID: 602149509}
+  lanternb: {fileID: 836198169}
+  lanternc: {fileID: 117585071}
+  lanternd: {fileID: 617522146}
+  lanternn: {fileID: 712444620}
+  pagea: {fileID: 488995038}
+  keyr: {fileID: 1685196722}
+  lanternr: {fileID: 209367876}
+  ikeyt: {fileID: 885511133}
+  ikeyb: {fileID: 617832232}
+  ilanterna: {fileID: 1285815194}
+  ilanternb: {fileID: 674698851}
+  ilanternc: {fileID: 642548616}
+  ilanternd: {fileID: 1735105409}
+  ilanternn: {fileID: 2025269818}
+  ipagea: {fileID: 1667081480}
+  ikeyr: {fileID: 108246106}
+  ilanternr: {fileID: 840019151}
+  skeyt: {fileID: 375052907}
+  skeyb: {fileID: 2120074140}
+  slanterna: {fileID: 72493365}
+  slanternb: {fileID: 625587400}
+  slanternc: {fileID: 1568546694}
+  slanternd: {fileID: 64245925}
+  slanternn: {fileID: 1895153708}
+  spagea: {fileID: 34555927}
+  skeyr: {fileID: 51211700}
+  slanternr: {fileID: 598029508}
+  keys: 0
+  lanternPeices: 0
+  inventory: []
+  pc: {fileID: 0}
+--- !u!4 &309791897
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309791895}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 856.2011, y: 289.23233, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &375052907
 GameObject:
   m_ObjectHideFlags: 0
@@ -38410,6 +38488,7 @@ MonoBehaviour:
   startScreen: {fileID: 0}
   instructionsScreen: {fileID: 0}
   timer: {fileID: 8472670632062595760, guid: 5297f6edbd71acc448b120199f73d869, type: 3}
+  player: {fileID: 0}
 --- !u!4 &705127043
 Transform:
   m_ObjectHideFlags: 0
@@ -40489,41 +40568,12 @@ MonoBehaviour:
   inventoryCanvas: {fileID: 1467230980}
   gameplayCanvas: {fileID: 1699091688}
   pauseCanvas: {fileID: 1780090028}
-  keyt: {fileID: 1683325207}
-  keyb: {fileID: 1927574696}
-  lanterna: {fileID: 602149509}
-  lanternb: {fileID: 836198169}
-  lanternc: {fileID: 117585071}
-  lanternd: {fileID: 617522146}
-  lanternn: {fileID: 712444620}
-  pagea: {fileID: 488995038}
-  keyr: {fileID: 1685196722}
-  lanternr: {fileID: 209367876}
-  ikeyt: {fileID: 885511133}
-  ikeyb: {fileID: 617832232}
-  ilanterna: {fileID: 1285815194}
-  ilanternb: {fileID: 674698851}
-  ilanternc: {fileID: 642548616}
-  ilanternd: {fileID: 1735105409}
-  ilanternn: {fileID: 2025269818}
-  ipagea: {fileID: 1667081480}
-  ikeyr: {fileID: 108246106}
-  ilanternr: {fileID: 840019151}
-  skeyt: {fileID: 375052907}
-  skeyb: {fileID: 2120074140}
-  slanterna: {fileID: 72493365}
-  slanternb: {fileID: 625587400}
-  slanternc: {fileID: 1568546694}
-  slanternd: {fileID: 64245925}
-  slanternn: {fileID: 1895153708}
-  spagea: {fileID: 34555927}
-  skeyr: {fileID: 51211700}
-  slanternr: {fileID: 598029508}
+  stuffScript: {fileID: 309791896}
   objtag: 
-  keys: 0
-  lanternPeices: 0
   selectedObj: 
-  inventory: []
+  destroy: {fileID: 0}
+  trigger1: {fileID: 0}
+  trigger2: {fileID: 0}
 --- !u!114 &1435501782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52005,3 +52055,4 @@ SceneRoots:
   - {fileID: 1934906490}
   - {fileID: 1524891693}
   - {fileID: 1501446088}
+  - {fileID: 309791897}

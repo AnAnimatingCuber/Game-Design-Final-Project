@@ -37461,9 +37461,9 @@ MonoBehaviour:
   spagea: {fileID: 34555927}
   skeyr: {fileID: 51211700}
   slanternr: {fileID: 598029508}
-  keys: 0
-  lanternPeices: 0
-  inventory: []
+  spriteKeyb: {fileID: 1593013963}
+  spriteKeyt: {fileID: 90204105}
+  normal_lantern: {fileID: 1515971314}
   pc: {fileID: 0}
 --- !u!4 &309791897
 Transform:

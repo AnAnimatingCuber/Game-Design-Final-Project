@@ -112,7 +112,7 @@ public class PlayerController : MonoBehaviour
             if (objtag == "kt")
             {   
                 stuffScript.kt();
-                trigger1.trigger1();
+    
 
 
                

@@ -33,21 +33,55 @@ public class Stuff : MonoBehaviour
     public GameObject spagea;
     public GameObject skeyr;
     public GameObject slanternr;
+    public GameObject spriteKeyb;
+    public GameObject spriteKeyt;
+    public GameObject normal_lantern;
+    public static Stuff stuffholder;
 
-     public int keys = 0;
-    public int lanternPeices = 0;
+    [SerializeField] public static int keys = 0;
+    [SerializeField] public static int lanternPeices = 0;
 
-    public List<string> inventory = new List<string>();
+    [SerializeField]public static List<string> inventory = new List<string>();
 
     public PlayerController pc;
+
 
     void Awake()
     {
         GameObject play = GameObject.Find("Player");
         pc = play.GetComponent<PlayerController>();
-        GameObject stuffholder = GameObject.Find("StuffHolder");
-        DontDestroyOnLoad(stuffholder);
+        // If an instance already exists and it's not this one, destroy this one
+        if (stuffholder != null && stuffholder != this)
+        {
+            foreach(string s in inventory)
+            {
+                if(s == "Repaired Key")
+                {
+                    Debug.Log("Repaired KEy");
+                    ikeyr.SetActive(false);
+                    skeyr.SetActive(true);
+                    spriteKeyb.SetActive(false);
+                    spriteKeyt.SetActive(false);
+                    skeyt.SetActive(false);
+                    skeyb.SetActive(false);
+                    ikeyb.SetActive(false);
+                    ikeyt.SetActive(false);
+
+                }
+
+            }
+            Destroy(this.gameObject);
+            return;
+        }
+
+        // Otherwise, set this as the instance
+        stuffholder = this;
+
+        // Persist across scenes
+        DontDestroyOnLoad(gameObject);
+
     }
+
 
     public string enterTrigger(GameObject thing)
     {
@@ -144,6 +178,7 @@ public class Stuff : MonoBehaviour
             skeyr.SetActive(true);
             inventory.Add("Repaired Key");
             pc.selectedObj = "Repiared Key";
+            pc.trigger1.trigger1();
 
         }
 
@@ -230,7 +265,7 @@ public class Stuff : MonoBehaviour
 
     public void la()
     {
-                        inventory.Add("Lantern Peice a");
+                inventory.Add("Lantern Peice a");
                 lanternPeices = lanternPeices + 1;
                 pc.selectedObj = ("Lantern Peice a");
                 keyt.SetActive(false);

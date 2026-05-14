@@ -35,7 +35,17 @@ public class Stuff : MonoBehaviour
     public GameObject slanternr;
     public GameObject spriteKeyb;
     public GameObject spriteKeyt;
+
+    public GameObject spriteLanterna;
+    public GameObject spriteLanternb;
+    public GameObject spriteLannternc;
+    public GameObject spriteLanternd;
+
     public GameObject normal_lantern;
+    public GameObject spell_page;
+
+    public GameObject winscreen;
+
     public static Stuff stuffholder;
 
     [SerializeField] public static int keys = 0;
@@ -53,11 +63,51 @@ public class Stuff : MonoBehaviour
         // If an instance already exists and it's not this one, destroy this one
         if (stuffholder != null && stuffholder != this)
         {
+            int bothObjects = 0;
             foreach(string s in inventory)
             {
+                if(bothObjects >= 2)
+                {
+                    winscreen.SetActive(true);
+                    lanternPeices = 0;
+                    keys = 0;
+
+                    spriteLanterna.SetActive(true);
+                    spriteLanternb.SetActive(true);
+                    spriteLannternc.SetActive(true);
+                    spriteLanternd.SetActive(true);
+                    spriteKeyb.SetActive(true);
+                    spriteKeyt.SetActive(true);
+                    normal_lantern.SetActive(true);
+                    spell_page.SetActive(true);
+
+                    ilanternr.SetActive(false);
+                    slanternr.SetActive(false);
+                    slanterna.SetActive(false);
+                    slanternb.SetActive(false);
+                    slanternc.SetActive(false);
+                    slanternd.SetActive(false);
+                    ilanterna.SetActive(false);
+                    ilanternb.SetActive(false);
+                    ilanternc.SetActive(false);
+                    ilanternd.SetActive(false);
+                    ikeyr.SetActive(false);
+                    skeyr.SetActive(false);
+                    skeyt.SetActive(false);
+                    skeyb.SetActive(false);
+                    ikeyb.SetActive(false);
+                    ikeyt.SetActive(false);
+                    slanternn.SetActive(false);
+                    ilanternn.SetActive(false);
+                    spagea.SetActive(false);
+                    ipagea.SetActive(false);
+                    break;
+
+                }
                 if(s == "Repaired Key")
                 {
-                    Debug.Log("Repaired KEy");
+                    bothObjects++;
+                    Debug.Log("Repaired Key");
                     ikeyr.SetActive(false);
                     skeyr.SetActive(true);
                     spriteKeyb.SetActive(false);
@@ -68,6 +118,95 @@ public class Stuff : MonoBehaviour
                     ikeyt.SetActive(false);
 
                 }
+
+                if(s == "Repaired Lantern")
+                {
+                    bothObjects++;
+                    Debug.Log("Repaired Lantern");
+                    ilanternr.SetActive(false);
+                    slanternr.SetActive(true);
+                    spriteLanterna.SetActive(false);
+                    spriteLanternb.SetActive(false);
+                    spriteLannternc.SetActive(false);
+                    spriteLanternd.SetActive(false);
+                    slanterna.SetActive(false);
+                    slanternb.SetActive(false);
+                    slanternc.SetActive(false);
+                    slanternd.SetActive(false);
+                    ilanterna.SetActive(false);
+                    ilanternb.SetActive(false);
+                    ilanternc.SetActive(false);
+                    ilanternd.SetActive(false);
+                }
+
+                if(s == "Keyb")
+                {
+                    Debug.Log("Key B");
+                    spriteKeyt.SetActive(false);
+                    skeyb.SetActive(true);
+                    ikeyb.SetActive(false);
+                    
+
+                }
+
+                if(s == "Keyt")
+                {
+                    Debug.Log("Key T");
+                    spriteKeyt.SetActive(false);
+                    skeyt.SetActive(true);
+                    ikeyt.SetActive(false);
+
+                }
+
+                if(s == "Lantern Peice a")
+                {
+                    Debug.Log("Lantern Peice a");
+                    spriteLanterna.SetActive(false);
+                    slanterna.SetActive(true);
+                    ilanterna.SetActive(false);
+                }
+
+                if(s == "Lantern Peice b")
+                {
+                    Debug.Log("Lantern Peice b");
+                    spriteLanternb.SetActive(false);
+                    slanternb.SetActive(true);
+                    ilanternb.SetActive(false);
+                }
+
+                if(s == "Lantern Peice c")
+                {
+                    Debug.Log("Lantern Peice c");
+                    spriteLannternc.SetActive(false);
+                    slanternc.SetActive(true);
+                    ilanternc.SetActive(false);
+                }
+
+                if(s == "Lantern Peice d")
+                {
+                    Debug.Log("Lantern Peice d");
+                    spriteLanternd.SetActive(false);
+                    slanternd.SetActive(true);
+                    ilanternd.SetActive(false);
+                }
+
+                if(s == "Lantern Normal")
+                {
+                    Debug.Log("Lantern Normal");
+                    normal_lantern.SetActive(false);
+                    slanternn.SetActive(true);
+                    ilanternn.SetActive(false);
+                }
+
+                if(s == "Lore Page Spell")
+                {
+                    Debug.Log("Lore Page Spell");
+                    spell_page.SetActive(false);
+                    spagea.SetActive(true);
+                    ipagea.SetActive(false);
+                }
+
+
 
             }
             Destroy(this.gameObject);
@@ -162,7 +301,7 @@ public class Stuff : MonoBehaviour
 
     public void kt()
     {
-         Debug.Log(keys);
+        Debug.Log(keys);
         keys = keys + 1;
 
         if(keys == 2)
@@ -237,7 +376,6 @@ public class Stuff : MonoBehaviour
                 {
 
                     inventory.Add("Keyb");
-                    keys = keys + 1;
                     pc.selectedObj = ("Keyb");
                     keyt.SetActive(false);
                     keyb.SetActive(true);
@@ -336,6 +474,30 @@ public class Stuff : MonoBehaviour
                 ipagea.SetActive(false);
                 ikeyr.SetActive(false);
                 slanternb.SetActive(true);
+
+                if(lanternPeices == 4)
+                {
+
+                    lanterna.SetActive(false);
+                    lanternb.SetActive(false);
+                    lanternc.SetActive(false);
+                    lanternd.SetActive(false);
+                    ilanterna.SetActive(false);
+                    ilanternb.SetActive(false);
+                    ilanternc.SetActive(false);
+                    ilanternd.SetActive(false);
+                    slanterna.SetActive(false);
+                    slanternb.SetActive(false);
+                    slanternc.SetActive(false);
+                    slanternd.SetActive(false);
+                    lanternr.SetActive(true);
+                    ilanternr.SetActive(true);
+                    slanternr.SetActive(true);
+                    inventory.Add("Repaired Lantern");
+                    pc.selectedObj = ("Repaired Lantern");
+                    pc.trigger2.trigger2();
+
+                }
     }
     public void lc()
     {
@@ -362,6 +524,30 @@ public class Stuff : MonoBehaviour
                 ipagea.SetActive(false);
                 ikeyr.SetActive(false);
                 slanternc.SetActive(true);
+
+                if(lanternPeices == 4)
+                {
+
+                    lanterna.SetActive(false);
+                    lanternb.SetActive(false);
+                    lanternc.SetActive(false);
+                    lanternd.SetActive(false);
+                    ilanterna.SetActive(false);
+                    ilanternb.SetActive(false);
+                    ilanternc.SetActive(false);
+                    ilanternd.SetActive(false);
+                    slanterna.SetActive(false);
+                    slanternb.SetActive(false);
+                    slanternc.SetActive(false);
+                    slanternd.SetActive(false);
+                    lanternr.SetActive(true);
+                    ilanternr.SetActive(true);
+                    slanternr.SetActive(true);
+                    inventory.Add("Repaired Lantern");
+                    pc.selectedObj = ("Repaired Lantern");
+                    pc.trigger2.trigger2();
+
+                }
     }
 
     public void ld()
@@ -389,6 +575,30 @@ public class Stuff : MonoBehaviour
                 ipagea.SetActive(false);
                 keyr.SetActive(false);
                 slanternd.SetActive(true);
+
+                if(lanternPeices == 4)
+                {
+
+                    lanterna.SetActive(false);
+                    lanternb.SetActive(false);
+                    lanternc.SetActive(false);
+                    lanternd.SetActive(false);
+                    ilanterna.SetActive(false);
+                    ilanternb.SetActive(false);
+                    ilanternc.SetActive(false);
+                    ilanternd.SetActive(false);
+                    slanterna.SetActive(false);
+                    slanternb.SetActive(false);
+                    slanternc.SetActive(false);
+                    slanternd.SetActive(false);
+                    lanternr.SetActive(true);
+                    ilanternr.SetActive(true);
+                    slanternr.SetActive(true);
+                    inventory.Add("Repaired Lantern");
+                    pc.selectedObj = ("Repaired Lantern");
+                    pc.trigger2.trigger2();
+
+                }
     }
     public void lantern()
     {
@@ -413,6 +623,7 @@ public class Stuff : MonoBehaviour
                 ikeyr.SetActive(false);
                 ilanternr.SetActive(false);
                 slanternn.SetActive(true);
+
     }
 
     public void pa()

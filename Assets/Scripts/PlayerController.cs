@@ -112,64 +112,41 @@ public class PlayerController : MonoBehaviour
             if (objtag == "kt")
             {   
                 stuffScript.kt();
-    
-
-
-               
-
             }
 
             else if (objtag == "kb")
             {
                 stuffScript.kb();
-
-               
             }
 
             else if (objtag == "la")
             {
                 stuffScript.la();
-
-
-
             }
 
             else if (objtag == "lb")
             {
                 stuffScript.lb();
-
-
-
             }
 
             else if (objtag == "lc")
             {
                 stuffScript.lc();
-
-
             }
 
             else if (objtag == "ld")
             {
                 stuffScript.ld();
-
-
             }
 
             else if (objtag == "lantern")
             {
                 stuffScript.lantern();
-
-
-
             }
 
             else if (objtag == "pa")
             {
                 stuffScript.pa();
-
-
-
             }
 
             destroy.Destroy();
@@ -181,8 +158,6 @@ public class PlayerController : MonoBehaviour
     public void Deselect (InputAction.CallbackContext context)
     {
         stuffScript.ds();
-
-
     }
 
     public void openInventory(InputAction.CallbackContext context)

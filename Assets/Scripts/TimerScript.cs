@@ -4,9 +4,20 @@ using UnityEngine.SceneManagement;
 public class TimerScript : MonoBehaviour
 {
     public string loseScene;
+    public static TimerScript stuffholder;
     void Awake()
     {
-        StartCoroutine(lose());
+        if (stuffholder != null && stuffholder != this)
+        {
+            StartCoroutine(lose());
+             Destroy(this.gameObject);
+            return;
+        }
+                // Otherwise, set this as the instance
+        stuffholder = this;
+
+        // Persist across scenes
+        DontDestroyOnLoad(gameObject);
     }
 
     IEnumerator lose(){

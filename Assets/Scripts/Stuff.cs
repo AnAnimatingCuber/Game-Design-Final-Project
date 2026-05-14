@@ -45,6 +45,8 @@ public class Stuff : MonoBehaviour
     public GameObject spell_page;
 
     public GameObject winscreen;
+    public GameObject gameScreen;
+    public GameObject TransitionStart;
 
     public static Stuff stuffholder;
 
@@ -69,6 +71,8 @@ public class Stuff : MonoBehaviour
                 if(bothObjects >= 2)
                 {
                     winscreen.SetActive(true);
+                    gameScreen.SetActive(false);
+                    TransitionStart.SetActive(false);
                     lanternPeices = 0;
                     keys = 0;
 

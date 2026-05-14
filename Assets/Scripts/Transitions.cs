@@ -8,6 +8,7 @@ public class Transitions : MonoBehaviour
     public Animator transitionAnim;
     public string sceneName1;
     public string sceneName2;
+    public string sceneName3;
     public string loseScene;
     public GameObject startScreen;
     public GameObject instructionsScreen;
@@ -70,6 +71,27 @@ public class Transitions : MonoBehaviour
         SceneManager.LoadScene(sceneName2);
     }
 
+     public void trigger3()
+    {
+        DontDestroyOnLoad(Instantiate(timer));
+        StartCoroutine(LoadScene3());
+    }
+
+IEnumerator LoadScene3()
+    {
+        if(player == null)
+        {
+            player = GameObject.Find("Player");
+            
+        }
+        if(player != null)
+        {
+            player.SetActive(!player.activeSelf);
+        }
+        transitionAnim.SetTrigger("endTransition");
+        yield return new WaitForSeconds(.5f);
+        SceneManager.LoadScene(sceneName3);
+    }
 
     public void quit()
     {

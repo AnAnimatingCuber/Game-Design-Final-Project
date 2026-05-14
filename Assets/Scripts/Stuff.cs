@@ -47,6 +47,7 @@ public class Stuff : MonoBehaviour
     public GameObject winscreen;
     public GameObject gameScreen;
     public GameObject TransitionStart;
+    public GameObject pauseScreen;
 
     public static Stuff stuffholder;
 
@@ -63,6 +64,7 @@ public class Stuff : MonoBehaviour
         GameObject play = GameObject.Find("Player");
         pc = play.GetComponent<PlayerController>();
         // If an instance already exists and it's not this one, destroy this one
+
         if (stuffholder != null && stuffholder != this)
         {
             int bothObjects = 0;
@@ -73,7 +75,9 @@ public class Stuff : MonoBehaviour
                     winscreen.SetActive(true);
                     gameScreen.SetActive(false);
                     TransitionStart.SetActive(false);
+                    pauseScreen.SetActive(false);
                     lanternPeices = 0;
+                    inventory = new List<string>();
                     keys = 0;
 
                     spriteLanterna.SetActive(true);

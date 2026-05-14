@@ -73,6 +73,7 @@ public class Transitions : MonoBehaviour
 
      public void trigger3()
     {
+        Time.timeScale = 1f;
         DontDestroyOnLoad(Instantiate(timer));
         StartCoroutine(LoadScene3());
     }

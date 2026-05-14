@@ -742,6 +742,7 @@ MonoBehaviour:
   transitionAnim: {fileID: 1949080528}
   sceneName1: Alik's Scene
   sceneName2: 
+  sceneName3: 
   loseScene: Lose Scene
   startScreen: {fileID: 1290010666}
   instructionsScreen: {fileID: 664785039}
@@ -2141,8 +2142,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1.4432068, y: 0.8659973}
+  m_SizeDelta: {x: -3.4637, y: -13.471}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1786592720
 MonoBehaviour:
@@ -2164,7 +2165,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7698666496149177283, guid: d03fc6d0de471a9419a5187089b30ee1, type: 3}
+  m_Sprite: {fileID: -7598396501972844291, guid: 0a76fc6a1d7097f43a5a96d17f093bb5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

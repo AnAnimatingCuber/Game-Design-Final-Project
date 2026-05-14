@@ -38,7 +38,19 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void pause()
+    {
+    gameplayCanvas.SetActive(false);
+    pauseCanvas.SetActive(true);
+    Time.timeScale = 0f;
+    }
 
+    public void unpause()
+    {
+        pauseCanvas.SetActive(false);
+        gameplayCanvas.SetActive(true);
+        Time.timeScale = 1f;
+    }
 
     public void OnMove(InputAction.CallbackContext context)
     { 
@@ -193,7 +205,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
+        
+        if (Input.GetKeyDown(KeyCode.F))
+            {
+                pause();
+            }
 
 
     }

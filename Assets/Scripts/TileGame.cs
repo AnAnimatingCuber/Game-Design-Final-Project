@@ -166,7 +166,7 @@ public void verify(){
 }
 
 private IEnumerator Skip(){
-    yield return new WaitForSeconds(3f);
+    yield return new WaitForSeconds(120f);
     skipButton.SetActive(true);
 }
 }
